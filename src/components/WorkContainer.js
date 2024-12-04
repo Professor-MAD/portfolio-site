@@ -9,6 +9,8 @@ function WorkContainer() {
             <div className="container-right">
                 <div className="container-right-top">
                     ManaMind: The MTG Stockfish
+                    <img className="github" src="/images/github.png" alt="github" />
+                    <img className="link" src="/images/link.png" alt="link" />
                 </div>
                 <div className="container-right-bottom">
                     <img className="mana-mind-screenshot" src="/images/mana-mind-shot.png" alt="mana-mind-screenshot" />

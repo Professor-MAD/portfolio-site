@@ -14,7 +14,10 @@
 .work-container:hover {
     border: 2px solid white;
     box-shadow: 0 0 10px white, 0 0 20px white;
-    background-image: url("./images/gray-moving-gif.gif");
+    /* background-image: url("gray-moving.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
 }
 
 .container-left {
@@ -24,6 +27,7 @@
     align-items: center;
     width: 15%;
     height: 100%;
+    margin-right: 10px;
 }
 
 .mana-mind {
@@ -70,6 +74,7 @@
     width: 20%;
     height: 80%;
     margin-right: 10px;
+    box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
 }
 
 .work-content {
@@ -108,5 +113,8 @@
     background-color: grey;
     color: white;
     border-radius: 30px;
-   padding: 10px;
+    padding: 20px;
+    text-shadow: 1px 1px 3px rgba(22, 23, 24, 0.5);
+    font-size: 1.25rem;
+    box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
 }

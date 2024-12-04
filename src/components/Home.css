@@ -5,6 +5,7 @@
     background-color: none;
     width: 100%;
     height: 30%;
+    border-bottom: 2px solid white;
 }
 
 .home-left {
@@ -67,5 +68,7 @@
     box-shadow: 0 0 10px turquoise, 0 0 20px turquoise;
 }
 
-
+.avatar {
+    cursor: pointer;
+}
 

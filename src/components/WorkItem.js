@@ -1,14 +1,14 @@
 import React from "react";
 import "./WorkContainer.css";
 
-function WorkItem({ title, logo, screenshot, github, link, icons, description }) {
+function WorkItem({ title, logo, screenshot, github, link, icons, description, fontFamily }) {
     return (
         <div className="work-container">
             <div className="container-left">
                 <img className="mana-mind" src={logo} alt={title} />
             </div>
             <div className="container-right">
-                <div className="container-right-top">
+                <div className="container-right-top" style={{ fontFamily: fontFamily }}>
                     {title}
                     <img className="github" src={github} alt="GitHub" />
                     <img className="link" src={link} alt="Link" />

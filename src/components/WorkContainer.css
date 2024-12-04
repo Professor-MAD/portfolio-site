@@ -4,7 +4,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 90%;
-    height: 350px;
+    height: 375px;
     margin: 20px;
     border-radius: 40px;
     border: 2px solid white;
@@ -49,17 +49,47 @@
     src: url('./fonts/Planewalker.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'Street Devil';
+    src: url('./fonts/STREET\ DEVIL.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Yikes';
+    src: url('./fonts/YIKES.TTF') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Poor Rich';
+    src: url('./fonts/POORICH.TTF') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Ringbearer';
+    src: url('./fonts/RingbearerMedium-51mgZ.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Cyberpunk';
+    src: url('./fonts/CIND.otf') format('opentype');
+}
+
+
 .container-right-top {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-family: 'Planewalker', sans-serif;
     width: 100%;
     height: 20%;
     text-align: center;
     font-size: 3rem;
-    position: relative; 
+    position: relative;
+    margin-top: 10px; 
 }
 
 .github {

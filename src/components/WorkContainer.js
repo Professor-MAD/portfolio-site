@@ -16,6 +16,7 @@ function WorkContainer() {
                     link={project.link}
                     icons={project.icons}
                     description={project.description}
+                    fontFamily={project.fontFamily}
                 />
             ))}
         </div>

@@ -10,7 +10,7 @@ function Home() {
                 <div className="projects-button"></div>
             </div>
             <div className="home-right">
-                <img className="avatar" src="avatar.png" alt="avatar" />
+                <img className="avatar" src="./images/avatar.png" alt="avatar" />
             </div>
         </div>
     );

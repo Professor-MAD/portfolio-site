@@ -156,11 +156,6 @@
     margin: 5px;
 }
 
-.c {
-    height: 100%;
-    width: 15%;
-}
-
 .text {
     display: flex;
     flex-direction: row;
@@ -175,4 +170,146 @@
     text-shadow: 1px 1px 3px rgba(22, 23, 24, 0.5);
     font-size: 1.25rem;
     box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
+}
+
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 480px) {
+    .work-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 95%;
+        height: 200px;
+        margin: 10px;
+        border-radius: 40px;
+        border: 2px solid white;
+        padding: 5px;
+    }
+    .container-left {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 5%;
+        height: 100%;
+        margin-right: 10px;
+    }
+    .mana-mind {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        top: 5px;
+        left: 5px;
+        z-index: 100;
+    }
+
+    .container-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 95%;
+        height: 100%;
+    }
+
+    .container-right-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+        text-align: center;
+        font-size: .6rem;
+        position: relative;
+        margin-top: 5px;
+        padding-left: 40px;
+    }
+
+    .github {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 5px;
+        right: 25px;
+        z-index: 100;
+        cursor: pointer;
+    }
+    
+    .link {
+        width: 15px;
+        height: 5px;
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    .container-right-bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 80%;
+    }
+
+    .mana-mind-screenshot {
+        width: 35%;
+        height: 70%;
+        margin-top: 30px;
+        margin-right: 10px;
+        box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
+    }
+    
+    .work-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 65%;
+        height: 100%;
+        padding: 3px;
+    }
+
+    .icon-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+
+    .icon {
+        height: 25px;
+        width: 25px;
+        margin: 2.5px;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        height: 80%;
+        background-color: grey;
+        color: white;
+        border-radius: 15px;
+        padding: 8px;
+        text-shadow: 1px 1px 3px rgba(22, 23, 24, 0.5);
+        font-size: .5rem;
+        box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
 }

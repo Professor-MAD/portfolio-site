@@ -5,8 +5,6 @@ function Work() {
     return (
         <div className="work-parent">
             <WorkContainer />
-            <WorkContainer />
-            <WorkContainer />
         </div>
     );
 }

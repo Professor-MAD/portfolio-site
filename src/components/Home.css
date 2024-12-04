@@ -69,6 +69,10 @@
 }
 
 .avatar {
+    margin-top: 15px;
     cursor: pointer;
+    height: 400px; /* Set an explicit height */
+    width: 400px; /* Set an explicit width */
 }
+
 

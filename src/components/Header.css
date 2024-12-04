@@ -11,7 +11,6 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    background-color: none;
     width: 50%;
     height: 100%;
     color: white;
@@ -23,9 +22,8 @@
 .header-right {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: none;
+    justify-content: flex-end; /* Align buttons to the right by default */
+    align-items: center;
     width: 45%;
     height: 100%;
     color: white;
@@ -39,54 +37,64 @@
 .about-button,
 .contact-button {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 20%;
     height: 100%;
     cursor: pointer;
+    text-align: center;
 }
 
-.home-button:hover {
-    color: lightgray;
-}
-
-.about-button:hover {
-    color: lightgray;
-}
-.work-button:hover {
-    color: lightgray;
-}
+.home-button:hover,
+.work-button:hover,
+.about-button:hover,
 .contact-button:hover {
     color: lightgray;
 }
 
-/* When the screen width is 768px or smaller */
+/* Styles for screen width 768px or smaller */
 @media (max-width: 768px) {
-    .header-left,
     .header-right {
-        font-size: 1.5rem; /* Adjust the size as needed */
+        justify-content: center; /* Center the buttons */
+        flex-wrap: wrap; /* Allow buttons to wrap if needed */
+        width: 100%;
+        margin-right: 0%;
+    }
+
+    .header-left {
+        width: 0%;
+        display: none;
     }
 
     .home-button,
     .work-button,
     .about-button,
     .contact-button {
-        font-size: 1rem; /* Adjust the size as needed */
+        font-size: 1rem; /* Adjust button size for smaller screens */
+        width: 20%; /* Shrink button width */
+        margin: 5px; /* Add spacing between buttons */
+    }
+
+    .header-container {
+        padding: 10px;
     }
 }
 
-/* When the screen width is 480px or smaller */
+/* Styles for screen width 480px or smaller */
 @media (max-width: 480px) {
-    .header-left,
     .header-right {
-        font-size: 1rem; /* Adjust the size as needed */
+        justify-content: center; /* Ensure buttons remain centered */
+        flex-wrap: wrap; /* Buttons wrap to fit smaller screens */
+        width: 100%;
     }
 
     .home-button,
     .work-button,
     .about-button,
     .contact-button {
-        font-size: 0.8rem; /* Adjust the size as needed */
+        font-size: 0.8rem; /* Make the text smaller */
+        width: 20%; /* Adjust button width for very small screens */
+        margin: 5px; /* Add spacing between buttons */
+
     }
 }

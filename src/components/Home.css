@@ -40,7 +40,7 @@
 }
 
 .description {
-    color: white;
+    color: lightgray;
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 40px;
@@ -53,8 +53,19 @@
     width: 150px;
     height: 45px;
     text-align: center;
-    padding: 13px;
+    padding: 11px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out; 
+    cursor: pointer;
 }
+
+.projects-button:hover {
+    border: 2px solid turquoise;
+    box-shadow: 0 0 10px turquoise, 0 0 20px turquoise;
+}
+
+
 

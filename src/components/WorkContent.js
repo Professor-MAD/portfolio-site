@@ -106,7 +106,7 @@ const workContent = [
         ],
         description: "Have you ever settled down for some Sega Dreamcast when all of a sudden you are stricken with indecision as to which game you should play? Too many decisions! With Dreamcast Centrifuge, you can select your custom list of games and then RANDOMIZE! The app will make the tough decisions for you. Don’t feel like playing Sonic Adventure 2? No problem! Try some Sega Marine Fishing? What’s that? Don’t like fish? How about some Chu Chu Rocket. The world is yours.",
         fontFamily: "Cyberpunk",
-        fontSize: ".6rem",
+        fontSize: ".1rem",
         desktopFontSize: "2.2rem"
     },
 

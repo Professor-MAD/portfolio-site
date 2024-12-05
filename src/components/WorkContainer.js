@@ -3,7 +3,6 @@ import "./WorkContainer.css";
 import workContent from "./WorkContent";
 import WorkItem from "./WorkItem";
 
-
 function WorkContainer() {
     return (
         <div>
@@ -18,7 +17,8 @@ function WorkContainer() {
                     icons={project.icons}
                     description={project.description}
                     fontFamily={project.fontFamily}
-                    fontSize={project.fontSize} // Pass fontSize here
+                    fontSize={project.fontSize}
+                    desktopFontSize={project.desktopFontSize} // Pass the desktop size
                 />
             ))}
         </div>

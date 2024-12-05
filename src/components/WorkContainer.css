@@ -11,7 +11,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 70%;
-    height: 400px;
+    height: 425px;
     margin-top: 20px;
     border-radius: 40px;
     border: 2px solid white;
@@ -34,8 +34,8 @@
     align-items: flex-start;
     width: 30%;
     height: 100%;
+    position: relative; /* Enables positioning of child elements */
     margin-right: 10px;
-    background-color: brown;
 }
 
 .container-right {
@@ -45,7 +45,6 @@
     align-items: center;
     width: 70%;
     height: 100%;
-    background-color: blue;
 }
 
 @font-face {
@@ -82,7 +81,7 @@
     src: url('./fonts/CIND.otf') format('opentype');
 }
 
-
+/* Title Text Here */
 .container-right-top {
     display: flex;
     flex-direction: row;
@@ -94,14 +93,15 @@
     /* font-size: 3rem; */
     position: relative;
     margin-top: 10px; 
-    background-color: red;
+    padding-left: 30px;
+    padding-top: 15px;
 }
 
 .github {
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 10px;
+    top: 120px;
     right: 50px;
     z-index: 100;
     cursor: pointer;
@@ -111,7 +111,7 @@
     width: 30px;
     height: 10px;
     position: absolute;
-    top: 20px;
+    top: 130px;
     right: 10px;
     z-index: 100;
     cursor: pointer;
@@ -128,15 +128,22 @@
 }
 
 .mana-mind {
-    width: 150px;
-    height: 150px;
-    background-color: aqua;
+    width: 125px; /* Adjust size as needed */
+    height: 125px;
+    position: absolute; /* Position relative to the container */
+    top: -5px; /* Adjust to overlap the screenshot */
+    left: -5px; /* Adjust to overlap the screenshot */
+    z-index: 10; /* Ensures it appears on top of the screenshot */
 }
 
 .mana-mind-screenshot {
     width: 90%;
     height: 70%;
     box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
+    position: relative; /* Keeps it in normal flow but under the logo */
+    z-index: 1; /* Ensures it's below the logo */
+    margin-top: 75px;
+    margin-left: 30px;
 }
 
 .work-content {
@@ -144,7 +151,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 80%;
+    width: 100%;
     height: 100%;
     padding: 10px;
 }
@@ -172,7 +179,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    height: 60%;
+    height: 80%;
     background-color: grey;
     color: white;
     border-radius: 30px;
@@ -180,6 +187,7 @@
     text-shadow: 1px 1px 3px rgba(22, 23, 24, 0.5);
     font-size: 1.25rem;
     box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
+    padding-bottom: 10px;
 }
 
 
@@ -202,12 +210,13 @@
     }
     .container-left {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        width: 5%;
+        width: 30%;
         height: 100%;
         margin-right: 10px;
+        background-color: blue;
     }
     .mana-mind {
         width: 50px;
@@ -215,7 +224,8 @@
         position: relative;
         top: 5px;
         left: 5px;
-        z-index: 100;
+        z-index: 1;
+        background-color: red;
     }
 
     .container-right {
@@ -225,6 +235,7 @@
         align-items: center;
         width: 95%;
         height: 100%;
+        background-color: purple;
     }
 
     /* Holds Title Text */
@@ -273,11 +284,10 @@
     }
 
     .mana-mind-screenshot {
-        width: 35%;
-        height: 70%;
-        margin-top: 30px;
-        margin-right: 10px;
+        width: 100%;
+        height: 100%;
         box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
+        margin-left: 0px;
     }
     
     .work-content {
@@ -285,7 +295,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        width: 65%;
+        width: 100%;
         height: 100%;
         padding: 3px;
     }

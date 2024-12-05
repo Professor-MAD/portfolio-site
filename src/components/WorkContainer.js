@@ -1,11 +1,10 @@
-import React from "react";
 import "./WorkContainer.css";
 import workContent from "./WorkContent";
 import WorkItem from "./WorkItem";
 
 function WorkContainer() {
     return (
-        <div>
+        <div className="container-wrap">
             {workContent.map((project, index) => (
                 <WorkItem
                     key={index}

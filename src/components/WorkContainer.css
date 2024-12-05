@@ -1,11 +1,18 @@
+.container-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .work-container {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 90%;
-    height: 375px;
-    margin: 20px;
+    width: 70%;
+    height: 400px;
+    margin-top: 20px;
     border-radius: 40px;
     border: 2px solid white;
     padding: 10px;

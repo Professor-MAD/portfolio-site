@@ -16,8 +16,10 @@ function WorkItem({ title, logo, screenshot, github, link, icons, description, f
                     className="container-right-top"
                     style={{
                         fontFamily: fontFamily,
-                        fontSize: `clamp(${fontSize}, 2vw, ${desktopFontSize})`,
+                        fontSize: `clamp(${fontSize}, calc(${fontSize} + 2vw), ${desktopFontSize})`,
                     }}
+                    
+                                      
                 >
                     {title}
                     <img className="github" src={github} alt="GitHub" />

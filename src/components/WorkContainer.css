@@ -190,11 +190,6 @@
     padding-bottom: 10px;
 }
 
-
-@media (max-width: 768px) {
-    
-}
-
 @media (max-width: 480px) {
     .work-container {
         display: flex;
@@ -335,5 +330,17 @@
         box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
         margin-right: 10px;
         margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-right-top {
+        font-size: var(--mobile-font-size);
+    }
+}
+
+@media (min-width: 769px) {
+    .container-right-top {
+        font-size: var(--desktop-font-size);
     }
 }

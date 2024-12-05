@@ -5,6 +5,11 @@ function WorkItem({ title, logo, screenshot, github, link, icons, description, f
         <div className="work-container">
             <div className="container-left">
                 <img className="mana-mind" src={logo} alt={title} />
+                <img
+                        className="mana-mind-screenshot"
+                        src={screenshot}
+                        alt={`${title} Screenshot`}
+                    />
             </div>
             <div className="container-right">
                 <div
@@ -19,11 +24,6 @@ function WorkItem({ title, logo, screenshot, github, link, icons, description, f
                     <img className="link" src={link} alt="Link" />
                 </div>
                 <div className="container-right-bottom">
-                    <img
-                        className="mana-mind-screenshot"
-                        src={screenshot}
-                        alt={`${title} Screenshot`}
-                    />
                     <div className="work-content">
                         <div className="icon-row">
                             {icons.map((icon, index) => (

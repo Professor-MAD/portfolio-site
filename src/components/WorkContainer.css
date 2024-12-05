@@ -29,20 +29,13 @@
 
 .container-left {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 15%;
+    width: 30%;
     height: 100%;
     margin-right: 10px;
-}
-
-.mana-mind {
-    width: 150px;
-    height: 150px;
-    display: relative;
-    top: 10px;
-    left: 10px;
+    background-color: brown;
 }
 
 .container-right {
@@ -50,8 +43,9 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 85%;
+    width: 70%;
     height: 100%;
+    background-color: blue;
 }
 
 @font-face {
@@ -92,14 +86,15 @@
 .container-right-top {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
     height: 20%;
     text-align: center;
     /* font-size: 3rem; */
     position: relative;
     margin-top: 10px; 
+    background-color: red;
 }
 
 .github {
@@ -132,10 +127,15 @@
     height: 80%;
 }
 
+.mana-mind {
+    width: 150px;
+    height: 150px;
+    background-color: aqua;
+}
+
 .mana-mind-screenshot {
-    width: 20%;
-    height: 80%;
-    margin-right: 10px;
+    width: 90%;
+    height: 70%;
     box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
 }
 

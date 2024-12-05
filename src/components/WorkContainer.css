@@ -233,7 +233,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        width: 95%;
+        width: 70%;
         height: 100%;
         background-color: purple;
     }
@@ -246,12 +246,13 @@
         align-items: center;
         width: 100%;
         height: 20%;
-        text-align: center;
+        text-align: start;
         /* font-size: .6rem; */
         position: relative;
         margin-top: 5px;
-        padding-left: 35px;
         padding-top: 5px;
+        padding-left: 0px;
+        background-color: red;
     }
 
     .github {
@@ -285,9 +286,10 @@
 
     .mana-mind-screenshot {
         width: 100%;
-        height: 100%;
+        height: 40%;
         box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
         margin-left: 0px;
+        margin-top: 0px;
     }
     
     .work-content {

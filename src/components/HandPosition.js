@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import "./ContactGame.css";
+import ThrowItems from "./ThrowItems";
 
-function HandPosition({ handPosition, setHandPosition, windowNum }) {
+function HandPosition({ handPosition, setHandPosition, windowNum, tomatoSelected, eggSelected, boogerSelected }) {
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.key === "ArrowLeft") {
@@ -29,7 +30,7 @@ function HandPosition({ handPosition, setHandPosition, windowNum }) {
                 />
                 <img
                     alt="hand"
-                    src="/images/hand-tomato.png"
+                    src={`${tomatoSelected ? "/images/hand-tomato.png" : ""}`}
                     className={`hand-indicator ${handPosition === 0 ? "visible" : ""}`}
                 />
             </div>
@@ -42,7 +43,7 @@ function HandPosition({ handPosition, setHandPosition, windowNum }) {
                 />
                 <img
                     alt="hand"
-                    src="/images/hand-tomato.png"
+                    src={`${eggSelected ? "/images/hand-egg.png" : ""}`}
                     className={`hand-indicator ${handPosition === 1 ? "visible" : ""}`}
                 />
             </div>
@@ -55,7 +56,7 @@ function HandPosition({ handPosition, setHandPosition, windowNum }) {
                 />
                 <img
                     alt="hand"
-                    src="/images/hand-tomato.png"
+                    src={`${boogerSelected ? "/images/hand-booger.png" : ""}`}
                     className={`hand-indicator ${handPosition === 2 ? "visible" : ""}`}
                 />
             </div>

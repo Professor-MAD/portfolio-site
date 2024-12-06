@@ -1,6 +1,37 @@
 import "./ContactGame.css";
+import { useState, useEffect } from 'react';
 
 function ThrowItems() {
+    const [ throwObjectSelected, setThrowObjectSelected ] = useState(false);
+    const [ tomatoSelected, setTomatoSelected ] = useState(false);
+    const [ eggSelected, setEggSelected ] = useState(false);
+    const [ boogerSelected, setBoogerSelected ] = useState(false);
+
+
+
+    useEffect(() => {
+        const handleObjectSelection = (event) => {
+            if (event.click === "tomato") {
+                setTomatoSelected(true);
+            } else if (event.click === "egg") {
+                setEggSelected(true);
+            } else if (event.click === "booger") {
+                setBoogerSelected(true);
+            } else {
+                return;
+            }
+
+            window.addEventListener("click", handleObjectSelection);
+            return () => window.removeEventListener("click", handleObjectSelection);
+        }
+    }, [throwObjectSelected]);
+
+    const handleObjectSelectionState = () => {
+        if (tomatoSelected === true || eggSelected === true || boogerSelected === true) {
+            setThrowObjectSelected(true);
+        }
+    };
+
     return (
         <div className="throw-items-wrapper">
             <div className="selection-wrapper">
@@ -36,7 +67,7 @@ function ThrowItems() {
                             </text>
                         </svg>
                     </div>
-                    <img className="selection-pic" src="/images/tomato.png" alt="tomato" />
+                    <img className="selection-pic tomato" src="/images/tomato.png" alt="tomato" />
                 </div>
 
                 {/* Eggbert the Egg */}
@@ -71,7 +102,7 @@ function ThrowItems() {
                             </text>
                         </svg>
                     </div>
-                    <img className="selection-pic" src="/images/egg.png" alt="egg" />
+                    <img className="selection-pic egg" src="/images/egg.png" alt="egg" />
                 </div>
 
                 {/* Mr. Booger Brown */}
@@ -106,7 +137,7 @@ function ThrowItems() {
                             </text>
                         </svg>
                     </div>
-                    <img className="selection-pic" src="/images/booger.png" alt="booger" />
+                    <img className="selection-pic booger" src="/images/booger.png" alt="booger" />
                 </div>
             </div>
         </div>

@@ -37,19 +37,23 @@ function ContactGame() {
                 setHandPosition={setHandPosition}
                 windowNum={windowNum}
             />
-            <ThrowItems />
-            <img className="fire-button" src="/images/fire.png" alt="fire" onClick={handleClickFire}/>
-            {revealSplat && <div className="splat-image">Splat!</div>}
-            <img onClick={() => {
+            <div className="action-holder">
+                <ThrowItems />
+                <img className="fire-button" src="/images/fire.png" alt="fire" onClick={handleClickFire}/>
+                {revealSplat && <div className="splat-image">Splat!</div>}
+                <img onClick={() => {
                     setGameStart(!gameStart);
                     setTimer(0);
                     setRevealSplat(false);
                     setGameIsWon(false);
                 }} className="start-button" src="/images/start.png" alt="start" />
-
-            <p>Timer: {timer.toFixed(1)}s</p>
-            <p>Target Window: {["Left", "Center", "Right"][windowNum]}</p>
-            <p>Your Position: {["Left", "Center", "Right"][handPosition]}</p>
+                <div className="info-holder">
+                    <p>Timer: {timer.toFixed(1)}s</p>
+                    <p>Target Window: {["Left", "Center", "Right"][windowNum]}</p>
+                    <p>Your Position: {["Left", "Center", "Right"][handPosition]}</p>
+                </div>
+            </div>
+            
         </div>
     );
 }

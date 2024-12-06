@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import "./ContactGame.css";
-import ThrowItems from "./ThrowItems";
 
-function HandPosition({ handPosition, setHandPosition, windowNum, tomatoSelected, eggSelected, boogerSelected }) {
+function HandPosition({ handPosition, setHandPosition, windowNum, selectedThrowItem }) {
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.key === "ArrowLeft") {
@@ -16,52 +15,25 @@ function HandPosition({ handPosition, setHandPosition, windowNum, tomatoSelected
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, [setHandPosition]);
 
-    console.log("WindowNum:", windowNum);
-    console.log("HandPosition:", handPosition);
-
     return (
         <div className="window-wrapper">
-            {/* Left Window */}
-            <div className="window left-window">
-                <img
-                    alt="face"
-                    src="/images/m1.png"
-                    className={`face ${windowNum === 0 ? "visible" : ""}`}
-                />
-                <img
-                    alt="hand"
-                    src={`${tomatoSelected ? "/images/hand-tomato.png" : ""}`}
-                    className={`hand-indicator ${handPosition === 0 ? "visible" : ""}`}
-                />
-            </div>
-            {/* Center Window */}
-            <div className="window center-window">
-                <img
-                    alt="face"
-                    src="/images/m2.png"
-                    className={`face ${windowNum === 1 ? "visible" : ""}`}
-                />
-                <img
-                    alt="hand"
-                    src={`${eggSelected ? "/images/hand-egg.png" : ""}`}
-                    className={`hand-indicator ${handPosition === 1 ? "visible" : ""}`}
-                />
-            </div>
-            {/* Right Window */}
-            <div className="window right-window">
-                <img
-                    alt="face"
-                    src="/images/m3.png"
-                    className={`face ${windowNum === 2 ? "visible" : ""}`}
-                />
-                <img
-                    alt="hand"
-                    src={`${boogerSelected ? "/images/hand-booger.png" : ""}`}
-                    className={`hand-indicator ${handPosition === 2 ? "visible" : ""}`}
-                />
-            </div>
+            {[0, 1, 2].map((num) => (
+                <div key={num} className={`window ${["left", "center", "right"][num]}-window`}>
+                    <img
+                        alt="face"
+                        src={`/images/m${num + 1}.png`}
+                        className={`face ${windowNum === num ? "visible" : ""}`}
+                    />
+                    <img
+                        alt="hand"
+                        src={`/images/hand-${selectedThrowItem || "tomato"}.png`}
+                        className={`hand-indicator ${handPosition === num ? "visible" : ""}`}
+                    />
+                </div>
+            ))}
         </div>
     );
 }
 
 export default HandPosition;
+

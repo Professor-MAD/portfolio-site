@@ -10,6 +10,7 @@ function ContactGame() {
     const [windowNum, setWindowNum] = useState(null);
     const [timer, setTimer] = useState(0);
     const [handPosition, setHandPosition] = useState(0);
+    const [selectedThrowItem, setSelectedThrowItem] = useState("tomato"); // Default to tomato
 
     useEffect(() => {
         if (gameStart) {
@@ -36,20 +37,23 @@ function ContactGame() {
                 handPosition={handPosition}
                 setHandPosition={setHandPosition}
                 windowNum={windowNum}
+                selectedThrowItem={selectedThrowItem}
             />
             <div className="action-holder">
-                <ThrowItems />
-                <div className="fire-button" onClick={handleClickFire}>FIRE!</div>
+                <ThrowItems setSelectedThrowItem={setSelectedThrowItem} />
+                <div className="fire-button" onClick={handleClickFire}>
+                    FIRE!
+                </div>
                 {revealSplat && <div className="splat-image">Splat!</div>}
                 <div
                     className="start-button"
                     onClick={() => {
-                        setGameStart(!gameStart); 
-                        setTimer(0); 
+                        setGameStart(!gameStart);
+                        setTimer(0);
                         setRevealSplat(false);
                         setGameIsWon(false);
-                        }}
-                        >
+                    }}
+                >
                     {gameStart ? "RESTART" : "START"}
                 </div>
                 <div className="info-holder">
@@ -58,7 +62,6 @@ function ContactGame() {
                     <p>Your Position: {["Left", "Center", "Right"][handPosition]}</p>
                 </div>
             </div>
-            
         </div>
     );
 }

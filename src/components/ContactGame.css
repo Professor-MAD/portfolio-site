@@ -155,14 +155,14 @@
 }
 
 .individual-wrap {
-    padding-top: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: -80px;
-    position: relative;
-    z-index: 1;
+    /* margin: -80px; */
+    /* position: relative; */
+    /* z-index: 1; */
+    width: 125px;
 }
 
 .selection-name {
@@ -170,7 +170,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 75px;
+    top: -20px;
     color: yellow;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 0.5px;
@@ -187,5 +187,31 @@
     width: 80px;
     height: 80px;
     position: relative;
-    z-index: 1;
+    top: -35px;
+    z-index: 3;
+    /* background-color: red; */
 }
+
+/* .tomato-wrap {
+    background-color: blue;
+}
+
+.tomato-name {
+    background-color: purple;
+}
+
+.egg-name {
+    background-color: orange;
+}
+
+.booger-name {
+    background-color: green;
+}
+
+.egg-wrap {
+    background-color: pink;
+}
+
+.egg-pic {
+    z-index: 3;
+} */

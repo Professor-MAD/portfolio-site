@@ -3,7 +3,7 @@
     text-align: center;
     margin: 20px auto; /* Center horizontally in the viewport */
     width: 80%; /* Example width for layout consistency */
-    max-width: 800px; /* Prevent component from growing too large */
+    max-width: 1000px; /* Prevent component from growing too large */
 }
 
 .splat-image {

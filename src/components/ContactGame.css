@@ -1,20 +1,20 @@
 .contact-game-wrapper {
-    position: relative; /* Parent element for relative positioning */
+    position: relative;
     text-align: center;
-    margin: 20px auto; /* Center horizontally in the viewport */
-    width: 80%; /* Example width for layout consistency */
-    max-width: 1000px; /* Prevent component from growing too large */
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1000px; 
 }
 
 .splat-image {
-    position: absolute; /* Positioned relative to the contact-game-wrapper */
-    top: 50%; /* Center vertically within the wrapper */
-    left: 50%; /* Center horizontally within the wrapper */
-    transform: translate(-50%, -50%); /* Adjust the element to center its middle */
-    width: 200px; /* Maintain a consistent size */
-    height: auto; /* Preserve aspect ratio */
-    z-index: 1000; /* Ensure it appears above other content */
-    cursor: pointer; /* Indicate it's clickable */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: auto;
+    z-index: 1000;
+    cursor: pointer;
 }
 
 
@@ -28,7 +28,7 @@
 .fire-button {
     height: 100px;
     width: 100px;
-    background: linear-gradient(to top, rgb(75, 1, 1), rgb(253, 37, 37)); /* Gradient from dark red to red */
+    background: linear-gradient(to top, rgb(75, 1, 1), rgb(253, 37, 37));
     border-radius: 50%;
     color: yellow;
     -webkit-text-stroke-color: black;
@@ -153,7 +153,7 @@
     align-items: flex-start;
     width: 90%;
     height: 70%;
-    background-color: brown;
+    background: linear-gradient(to top, rgb(78, 39, 2), rgb(194, 119, 49));
     border-radius: 30px;
     border: 2px solid white;
     position: relative;

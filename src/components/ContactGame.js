@@ -40,22 +40,17 @@ function ContactGame() {
             <div className="action-holder">
                 <ThrowItems />
                 <div className="fire-button" onClick={handleClickFire}>FIRE!</div>
-                {/* <img className="fire-button" src="/images/fire.png" alt="fire" onClick={handleClickFire}/> */}
                 {revealSplat && <div className="splat-image">Splat!</div>}
-                {/* <img onClick={() => {
-                    setGameStart(!gameStart);
-                    setTimer(0);
-                    setRevealSplat(false);
-                    setGameIsWon(false);
-                }} className="start-button" src="/images/start.png" alt="start" /> */}
-                <div className="start-button"
+                <div
+                    className="start-button"
                     onClick={() => {
-                        setGameStart(!gameStart);
-                        setTimer(0);
+                        setGameStart(!gameStart); 
+                        setTimer(0); 
                         setRevealSplat(false);
                         setGameIsWon(false);
-                    }}
-                > START
+                        }}
+                        >
+                    {gameStart ? "RESTART" : "START"}
                 </div>
                 <div className="info-holder">
                     <p>Timer: {timer.toFixed(1)}s</p>

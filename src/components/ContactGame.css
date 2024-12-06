@@ -33,6 +33,24 @@
     text-align: center;
     padding-top: 25px;
     padding-left: 5px;
+    cursor: pointer;
+}
+
+.fire-button:hover {
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(to top, rgb(2, 83, 50), rgb(37, 253, 73)); /* Gradient from dark red to red */
+    border-radius: 50%;
+    color: blueviolet;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.5px;
+    font-family: 'Yikes';
+    font-size: 2.3rem;
+    border: 5px solid grey;
+    text-align: center;
+    padding-top: 25px;
+    padding-left: 5px;
+    cursor: pointer;
 }
 
 .start-button {
@@ -50,7 +68,23 @@
     border-radius: 30px;
     text-align: center;
     padding-top: 25px;
+}
 
+.start-button:hover {
+    margin: 10px;
+    cursor: pointer;
+    width: 150px;
+    height: 100px;
+    background: linear-gradient(to top, rgb(87, 12, 94), rgb(222, 42, 238));
+    color: aqua;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.5px;
+    font-family: 'Yikes';
+    font-size: 2.3rem;
+    border: 5px solid aqua;
+    border-radius: 30px;
+    text-align: center;
+    padding-top: 25px;
 }
 
 .info-holder {
@@ -59,6 +93,7 @@
     justify-content: center;
     align-items: center;
     color: white;
+    width: 200px;
 }
 
 .window-wrapper {
@@ -121,6 +156,7 @@
     border-radius: 30px;
     border: 2px solid white;
     position: relative; /* Enable relative positioning for overlapping */
+    cursor: pointer;
 }
 
 .individual-wrap {

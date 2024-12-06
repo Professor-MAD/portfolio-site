@@ -70,47 +70,61 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 400px;
+    width: 450px;
     height: 300px;
     background-color: none;
+    margin-left: 400px;
 }
 
 .selection-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 90%;
-    height: 90%;
+    height: 70%;
     background-color: brown;
     border-radius: 30px;
     border: 2px solid white;
+    position: relative; /* Enable relative positioning for overlapping */
 }
 
 .individual-wrap {
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    margin: -80px; /* Allow overlapping by using negative margins */
+    position: relative; /* Ensure child elements respect their parent's stacking context */
+    z-index: 1; /* Ensure proper layering */
 }
 
 .selection-name {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: 75px;
     color: yellow;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 0.5px;
     font-family: 'Yikes';
     font-size: 1.5rem;
-    transform: rotate(-50deg); /* Rotates the text */
+    transform: rotate(-30deg); /* Rotates the text */
     overflow: visible; /* Allows text to extend beyond its boundaries */
     white-space: nowrap; /* Prevents text from breaking into multiple lines */
     text-shadow: 1px 1px 2px black; /* Optional: Adds depth */
+    z-index: 2; /* Make sure text appears above overlapping elements */
 }
 
+.text-arch {
+    overflow: visible;
+}
 
 .selection-pic {
     width: 100px;
     height: 100px;
+    position: relative;
+    z-index: 1; /* Keep the picture slightly below the text */
 }

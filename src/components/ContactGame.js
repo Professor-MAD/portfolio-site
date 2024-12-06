@@ -24,6 +24,22 @@ function ContactGame() {
         }
     }, [gameStart]);
 
+    // Auto-reset game when revealSplat is true
+    useEffect(() => {
+        if (revealSplat) {
+            const resetTimeout = setTimeout(() => {
+                setGameStart(false);
+                setTimer(0);
+                setRevealSplat(false);
+                setGameIsWon(false);
+                setWindowNum(null);
+                setHandPosition(0);
+            }, 2000); // Wait 2 seconds before resetting the game
+
+            return () => clearTimeout(resetTimeout);
+        }
+    }, [revealSplat]);
+
     const handleClickFire = () => {
         if (windowNum === handPosition) {
             setGameIsWon(true);
@@ -33,6 +49,18 @@ function ContactGame() {
 
     return (
         <div className="contact-game-wrapper">
+            <div className="game-information-container">
+                <div className="game-title">SPLAT ATTACK!</div>
+                <div className="game-sub-title">MESSAGE DELIVERY SERVICE</div>
+                <div className="instructions">
+                    <p>1. Write your message</p>
+                    <p>2. Choose your projectile</p>
+                    <p>3. Press start</p>
+                    <p>Objective: Use the Arrow Keys on your keyboard to move your hand. </p>
+                    <p>Press Fire! when you're ready to throw. Get a splat and your message is sent!</p>
+                </div>    
+            </div>
+            <input className="input"></input>
             {revealSplat && (
                 <img
                     className="splat-image"

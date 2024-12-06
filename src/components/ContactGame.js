@@ -39,7 +39,8 @@ function ContactGame() {
             />
             <div className="action-holder">
                 <ThrowItems />
-                <img className="fire-button" src="/images/fire.png" alt="fire" onClick={handleClickFire}/>
+                <div className="fire-button" onClick={handleClickFire}>FIRE!</div>
+                {/* <img className="fire-button" src="/images/fire.png" alt="fire" onClick={handleClickFire}/> */}
                 {revealSplat && <div className="splat-image">Splat!</div>}
                 <img onClick={() => {
                     setGameStart(!gameStart);

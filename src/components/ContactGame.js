@@ -36,7 +36,7 @@ function ContactGame() {
             {revealSplat && (
                 <img
                     className="splat-image"
-                    src="/images/tomato-splat.png"
+                    src={`/images/${selectedThrowItem}-splat.png`}
                     alt="Splat"
                     onClick={() => setRevealSplat(false)}
                 />
@@ -74,5 +74,3 @@ function ContactGame() {
 }
 
 export default ContactGame;
-
-

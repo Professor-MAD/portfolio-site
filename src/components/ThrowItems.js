@@ -3,10 +3,8 @@ function ThrowItems({ setSelectedThrowItem }) {
         <div className="throw-items-wrapper">
             <div className="selection-wrapper">
                 {/* Tommy Tomato */}
-                <div
-                    className="individual-wrap tomato-wrap"
-                >
-                    <div  className="selection-name tomato-name">
+                <div className="individual-wrap tomato-wrap">
+                    <div className="selection-name tomato-name">
                         <svg
                             width="300"
                             height="50"
@@ -22,7 +20,6 @@ function ThrowItems({ setSelectedThrowItem }) {
                                 fontFamily="Yikes"
                                 stroke="black"
                                 strokeWidth="0.5"
-                        
                             >
                                 <textPath
                                     href="#curvePathTomato"
@@ -34,15 +31,17 @@ function ThrowItems({ setSelectedThrowItem }) {
                             </text>
                         </svg>
                     </div>
-                    <img onClick={() => setSelectedThrowItem("tomato")} className="selection-pic" src="/images/tomato.png" alt="tomato" />
+                    <img
+                        onClick={() => setSelectedThrowItem("tomato")}
+                        className="selection-pic"
+                        src="/images/tomato.png"
+                        alt="tomato"
+                    />
                 </div>
 
                 {/* Eggbert the Egg */}
-                <div
-                    className="individual-wrap egg-wrap"
-                    // onClick={() => setSelectedThrowItem("egg")}
-                >
-                    <div  className="selection-name egg-name">
+                <div className="individual-wrap egg-wrap">
+                    <div className="selection-name egg-name">
                         <svg
                             width="300"
                             height="50"
@@ -69,15 +68,17 @@ function ThrowItems({ setSelectedThrowItem }) {
                             </text>
                         </svg>
                     </div>
-                    <img onClick={() => setSelectedThrowItem("egg")} className="selection-pic egg-pic" src="/images/egg.png" alt="egg" />
+                    <img
+                        onClick={() => setSelectedThrowItem("egg")}
+                        className="selection-pic egg-pic"
+                        src="/images/egg.png"
+                        alt="egg"
+                    />
                 </div>
 
                 {/* Mr. Booger Brown */}
-                <div
-                    className="individual-wrap"
-                    // onClick={() => setSelectedThrowItem("egg")}
-                >
-                    <div  className="selection-name booger-name">
+                <div className="individual-wrap booger-wrap">
+                    <div className="selection-name booger-name">
                         <svg
                             width="300"
                             height="50"
@@ -104,7 +105,12 @@ function ThrowItems({ setSelectedThrowItem }) {
                             </text>
                         </svg>
                     </div>
-                    <img onClick={() => setSelectedThrowItem("booger")} className="selection-pic" src="/images/booger.png" alt="booger" />
+                    <img
+                        onClick={() => setSelectedThrowItem("booger")}
+                        className="selection-pic"
+                        src="/images/booger.png"
+                        alt="booger"
+                    />
                 </div>
             </div>
         </div>

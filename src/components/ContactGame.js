@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./ContactGame.css";
 import HandPosition from "./HandPosition";
+import ThrowItems from "./ThrowItems";
 
 function ContactGame() {
     const [gameStart, setGameStart] = useState(false);
@@ -32,10 +33,11 @@ function ContactGame() {
     return (
         <div className="contact-game-wrapper">
             <HandPosition
-                 handPosition={handPosition}
+                handPosition={handPosition}
                 setHandPosition={setHandPosition}
                 windowNum={windowNum}
             />
+            <ThrowItems />
             <img className="fire-button" src="/images/fire.png" alt="fire" onClick={handleClickFire}/>
             {revealSplat && <div className="splat-image">Splat!</div>}
             <img onClick={() => {

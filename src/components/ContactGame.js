@@ -6,15 +6,14 @@ function ContactGame() {
     const [gameStart, setGameStart] = useState(false);
     const [gameIsWon, setGameIsWon] = useState(false);
     const [revealSplat, setRevealSplat] = useState(false);
-    const [windowNum, setWindowNum] = useState(null); // Random position
-    const [timer, setTimer] = useState(0); // Timer
-    const [handPosition, setHandPosition] = useState(0); // Player-controlled position
+    const [windowNum, setWindowNum] = useState(null);
+    const [timer, setTimer] = useState(0);
+    const [handPosition, setHandPosition] = useState(0);
 
-    // Generate random window every 0.5s when the game is running
     useEffect(() => {
         if (gameStart) {
             const intervalId = setInterval(() => {
-                const randomNum = Math.floor(Math.random() * 3); // Random 0, 1, or 2
+                const randomNum = Math.floor(Math.random() * 3);
                 setWindowNum(randomNum);
                 setTimer((prev) => prev + 0.5);
             }, 500);
@@ -23,7 +22,6 @@ function ContactGame() {
         }
     }, [gameStart]);
 
-    // Handle "fire" button logic
     const handleClickFire = () => {
         if (windowNum === handPosition) {
             setGameIsWon(true);
@@ -37,21 +35,15 @@ function ContactGame() {
                 handPosition={handPosition}
                 setHandPosition={setHandPosition}
             />
-            <button className="fire-button" onClick={handleClickFire}>
-                Fire
-            </button>
+            <img className="fire-button" src="/images/fire.png" alt="fire" onClick={handleClickFire}/>
             {revealSplat && <div className="splat-image">Splat!</div>}
-            <button
-                onClick={() => {
+            <img onClick={() => {
                     setGameStart(!gameStart);
                     setTimer(0);
                     setRevealSplat(false);
                     setGameIsWon(false);
-                }}
-                className="start-button"
-            >
-                {gameStart ? "Restart Game" : "Start Game"}
-            </button>
+                }} className="start-button" src="/images/start.png" alt="start" />
+
             <p>Timer: {timer.toFixed(1)}s</p>
             <p>Target Window: {["Left", "Center", "Right"][windowNum]}</p>
             <p>Your Position: {["Left", "Center", "Right"][handPosition]}</p>

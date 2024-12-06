@@ -4,6 +4,7 @@ import HandPosition from "./HandPosition";
 import ThrowItems from "./ThrowItems";
 
 function ContactGame() {
+    const defaultMessage = "Dear Mr. Dioguardi, we want to hire you. You are the absolute coolest.";
     const [gameStart, setGameStart] = useState(false);
     const [gameIsWon, setGameIsWon] = useState(false);
     const [revealSplat, setRevealSplat] = useState(false);
@@ -11,6 +12,7 @@ function ContactGame() {
     const [timer, setTimer] = useState(0);
     const [handPosition, setHandPosition] = useState(0);
     const [selectedThrowItem, setSelectedThrowItem] = useState("tomato");
+    const [message, setMessage] = useState(defaultMessage); // Manage input value
 
     useEffect(() => {
         if (gameStart) {
@@ -27,6 +29,8 @@ function ContactGame() {
     // Auto-reset game when revealSplat is true
     useEffect(() => {
         if (revealSplat) {
+            console.log("Message Sent:", message); // Message sent behind the scenes
+
             const resetTimeout = setTimeout(() => {
                 setGameStart(false);
                 setTimer(0);
@@ -34,6 +38,7 @@ function ContactGame() {
                 setGameIsWon(false);
                 setWindowNum(null);
                 setHandPosition(0);
+                setMessage(defaultMessage); // Reset the message
             }, 2000); // Wait 2 seconds before resetting the game
 
             return () => clearTimeout(resetTimeout);
@@ -58,9 +63,13 @@ function ContactGame() {
                     <p>3. Press start</p>
                     <p>Objective: Use the Arrow Keys on your keyboard to move your hand. </p>
                     <p>Press Fire! when you're ready to throw. Get a splat and your message is sent!</p>
-                </div>    
+                </div>
             </div>
-            <input className="input"></input>
+            <textarea
+                className="input"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+            />
             {revealSplat && (
                 <img
                     className="splat-image"

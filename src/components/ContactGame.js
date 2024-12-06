@@ -10,7 +10,7 @@ function ContactGame() {
     const [windowNum, setWindowNum] = useState(null);
     const [timer, setTimer] = useState(0);
     const [handPosition, setHandPosition] = useState(0);
-    const [selectedThrowItem, setSelectedThrowItem] = useState("tomato"); // Default to tomato
+    const [selectedThrowItem, setSelectedThrowItem] = useState("tomato");
 
     useEffect(() => {
         if (gameStart) {
@@ -33,6 +33,12 @@ function ContactGame() {
 
     return (
         <div className="contact-game-wrapper">
+            {revealSplat && (
+                // <div className="splat-image" onClick={() => setRevealSplat(false)}>
+                //     Splat!
+                // </div>
+                <img className="splat-image" src="/images/tomato-splat.png " onClick={() => setRevealSplat(false)} />
+            )}
             <HandPosition
                 handPosition={handPosition}
                 setHandPosition={setHandPosition}
@@ -44,7 +50,6 @@ function ContactGame() {
                 <div className="fire-button" onClick={handleClickFire}>
                     FIRE!
                 </div>
-                {revealSplat && <div className="splat-image">Splat!</div>}
                 <div
                     className="start-button"
                     onClick={() => {

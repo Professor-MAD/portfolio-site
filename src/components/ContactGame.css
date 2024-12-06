@@ -4,13 +4,17 @@
 }
 
 .splat-image {
-    margin-top: 20px;
-    color: white;
-    background-color: green;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 1.5rem;
+    position: fixed; /* Make it cover the viewport */
+    top: 500px;
+    left: 850px;
+    width: 200px; /* Full width */
+    height: 200px; /* Full height */
+    display: flex; /* Center content */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it is above everything else */
 }
+
 
 .action-holder {
     display: flex;

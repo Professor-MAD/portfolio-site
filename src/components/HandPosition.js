@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import "./ContactGame.css";
 
-function HandPosition({ handPosition, setHandPosition }) {
-
+function HandPosition({ handPosition, setHandPosition, windowNum }) {
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.key === "ArrowLeft") {
@@ -18,17 +17,30 @@ function HandPosition({ handPosition, setHandPosition }) {
 
     return (
         <div className="window-wrapper">
-            <img alt="left" src="/images/m1.png" className={`window left-window ${
+            <div
+                className={`window left-window ${windowNum === 0 ? "show-face" : ""} ${
                     handPosition === 0 ? "active" : ""
-                }`} />
-            <img alt="center" src="/images/m2.png" className={`window center-window ${
+                }`}
+            >
+                <img alt="left" src="/images/m1.png" />
+            </div>
+            <div
+                className={`window center-window ${windowNum === 1 ? "show-face" : ""} ${
                     handPosition === 1 ? "active" : ""
-                }`}/>
-            <img alt="right" src="/images/m3.png" className={`window right-window ${
+                }`}
+            >
+                <img alt="center" src="/images/m2.png" />
+            </div>
+            <div
+                className={`window right-window ${windowNum === 2 ? "show-face" : ""} ${
                     handPosition === 2 ? "active" : ""
-                }`} />        
+                }`}
+            >
+                <img alt="right" src="/images/m3.png" />
+            </div>
         </div>
     );
 }
 
 export default HandPosition;
+

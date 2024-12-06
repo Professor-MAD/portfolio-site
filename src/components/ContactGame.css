@@ -96,15 +96,19 @@
 
 .selection-name {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     color: yellow;
     -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-width: 0.5px;
     font-family: 'Yikes';
-    font-size: 2rem;
+    font-size: 1.5rem;
+    transform: rotate(-50deg); /* Rotates the text */
+    overflow: visible; /* Allows text to extend beyond its boundaries */
+    white-space: nowrap; /* Prevents text from breaking into multiple lines */
+    text-shadow: 1px 1px 2px black; /* Optional: Adds depth */
 }
+
 
 .selection-pic {
     width: 100px;

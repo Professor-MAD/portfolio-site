@@ -34,10 +34,12 @@ function ContactGame() {
     return (
         <div className="contact-game-wrapper">
             {revealSplat && (
-                // <div className="splat-image" onClick={() => setRevealSplat(false)}>
-                //     Splat!
-                // </div>
-                <img className="splat-image" src="/images/tomato-splat.png " onClick={() => setRevealSplat(false)} />
+                <img
+                    className="splat-image"
+                    src="/images/tomato-splat.png"
+                    alt="Splat"
+                    onClick={() => setRevealSplat(false)}
+                />
             )}
             <HandPosition
                 handPosition={handPosition}
@@ -72,3 +74,5 @@ function ContactGame() {
 }
 
 export default ContactGame;
+
+

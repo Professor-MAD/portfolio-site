@@ -1,18 +1,20 @@
 .contact-game-wrapper {
+    position: relative; /* Parent element for relative positioning */
     text-align: center;
-    margin: 20px;
+    margin: 20px auto; /* Center horizontally in the viewport */
+    width: 80%; /* Example width for layout consistency */
+    max-width: 800px; /* Prevent component from growing too large */
 }
 
 .splat-image {
-    position: fixed; /* Make it cover the viewport */
-    top: 500px;
-    left: 850px;
-    width: 200px; /* Full width */
-    height: 200px; /* Full height */
-    display: flex; /* Center content */
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Ensure it is above everything else */
+    position: absolute; /* Positioned relative to the contact-game-wrapper */
+    top: 50%; /* Center vertically within the wrapper */
+    left: 50%; /* Center horizontally within the wrapper */
+    transform: translate(-50%, -50%); /* Adjust the element to center its middle */
+    width: 200px; /* Maintain a consistent size */
+    height: auto; /* Preserve aspect ratio */
+    z-index: 1000; /* Ensure it appears above other content */
+    cursor: pointer; /* Indicate it's clickable */
 }
 
 

@@ -98,6 +98,7 @@
     display: flex;
     justify-content: center;
     margin: 10px 0;
+    cursor: pointer;
 }
 
 .menu__item {
@@ -130,5 +131,34 @@
     }
     100% {
         background-position-x: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu__link {
+        font-size: 1rem;
+        color: #fff;
+        margin: 0 10px;
+        text-decoration: none;
+        opacity: 0.75;
+        transition: 0.5s;
+    }
+
+    .footer p {
+        color: #fff;
+        font-size: .75rem;
+    }
+    .footer {
+        position: relative;
+        width: 100%;
+        /* background: #3586ff; */
+        /* min-height: 200px; */
+        height: 125px;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* padding: 150px; */
     }
 }

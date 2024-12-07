@@ -73,6 +73,7 @@ function ContactGame() {
                     <p>2. Choose your projectile</p>
                     <p>3. Press start</p>
                     <p>Objective: Use the Arrow Keys on your keyboard to move your hand. </p>
+                    <p>Tap the window to select for mobile.</p>
                     <p>Press Fire! when you're ready to throw. Get a splat and your message is sent!</p>
                 </div>
             </div>

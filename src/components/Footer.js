@@ -1,6 +1,13 @@
 import "./Footer.css";
 
 function Footer() {
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <footer className="footer">
             {/* Wave Layers */}
@@ -13,59 +20,68 @@ function Footer() {
 
             {/* Social Icons */}
             <div className="info-container">
-            <ul className="social-icon">
-                <li className="social-icon__item">
-                    <a className="social-icon__link" href="#">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                    </a>
-                </li>
-                <li className="social-icon__item">
-                    <a className="social-icon__link" href="#">
-                        <ion-icon name="logo-twitter"></ion-icon>
-                    </a>
-                </li>
-                <li className="social-icon__item">
-                    <a className="social-icon__link" href="#">
-                        <ion-icon name="logo-linkedin"></ion-icon>
-                    </a>
-                </li>
-                <li className="social-icon__item">
-                    <a className="social-icon__link" href="#">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                    </a>
-                </li>
-            </ul>
+                <ul className="social-icon">
+                    <li className="social-icon__item">
+                        <div className="social-icon__link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </div>
+                    </li>
+                    <li className="social-icon__item">
+                        <div className="social-icon__link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </div>
+                    </li>
+                    <li className="social-icon__item">
+                        <div className="social-icon__link">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </div>
+                    </li>
+                    <li className="social-icon__item">
+                        <div className="social-icon__link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </div>
+                    </li>
+                </ul>
 
-             {/* Menu Links */}
-             <ul className="menu">
-                <li className="menu__item">
-                    <a className="menu__link" href="#">
-                        Home
-                    </a>
-                </li>
-                <li className="menu__item">
-                    <a className="menu__link" href="#">
-                        Work
-                    </a>
-                </li>
-                <li className="menu__item">
-                    <a className="menu__link" href="#">
-                        About
-                    </a>
-                </li>
-                <li className="menu__item">
-                    <a className="menu__link" href="#">
-                        Contact
-                    </a>
-                </li>
-            </ul>
+                {/* Menu Links */}
+                <ul className="menu">
+                    <li className="menu__item">
+                        <div
+                            className="menu__link"
+                            onClick={() => scrollToSection("home")}
+                        >
+                            Home
+                        </div>
+                    </li>
+                    <li className="menu__item">
+                        <div
+                            className="menu__link"
+                            onClick={() => scrollToSection("work")}
+                        >
+                            Work
+                        </div>
+                    </li>
+                    <li className="menu__item">
+                        <div
+                            className="menu__link"
+                            onClick={() => scrollToSection("about")}
+                        >
+                            About
+                        </div>
+                    </li>
+                    <li className="menu__item">
+                        <div
+                            className="menu__link"
+                            onClick={() => scrollToSection("contact")}
+                        >
+                            Contact
+                        </div>
+                    </li>
+                </ul>
 
-            {/* Footer Text */}
-            <p>&copy;2024 Michael Dioguardi | All Rights Reserved</p>
+                {/* Footer Text */}
+                <p>&copy;2024 Michael Dioguardi | All Rights Reserved</p>
             </div>
-            
-
-           
         </footer>
     );
 }

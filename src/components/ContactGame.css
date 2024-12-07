@@ -279,7 +279,8 @@
         text-align: center;
         margin: 20px auto;
         width: 80%;
-        max-width: 1000px; 
+        max-width: 1000px;
+        overflow: hidden; /* Prevents overflow */ 
     }
     
     
@@ -480,8 +481,8 @@
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
-        width: 350px;
-        height: 70%;
+        width: 285px;
+        height: 60%;
         background: linear-gradient(to top, rgb(78, 39, 2), rgb(194, 119, 49));
         border-radius: 30px;
         border: 2px solid white;
@@ -516,7 +517,6 @@
         white-space: nowrap;
         text-shadow: 1px 1px 2px black;
         z-index: 2;
-        background-color: purple;
     }
     
     .selection-pic {
@@ -529,6 +529,6 @@
     }
     
     .throw-item-text {
-        font-size: 20px;
+        font-size: 15px;
     }
 }

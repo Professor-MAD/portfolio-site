@@ -455,6 +455,12 @@
         }
     }
     
+    .mobile-throw-items {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
     .throw-items-wrapper {
         display: flex;
         flex-direction: row;

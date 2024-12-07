@@ -12,7 +12,18 @@ function ContactGame() {
     const [timer, setTimer] = useState(0);
     const [handPosition, setHandPosition] = useState(0);
     const [selectedThrowItem, setSelectedThrowItem] = useState("tomato");
-    const [message, setMessage] = useState(defaultMessage); // Manage input value
+    const [message, setMessage] = useState(defaultMessage);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 480); // Initial check
+
+    // Detect window resize and update `isMobile`
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 480);
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     useEffect(() => {
         if (gameStart) {
@@ -84,8 +95,13 @@ function ContactGame() {
                 windowNum={windowNum}
                 selectedThrowItem={selectedThrowItem}
             />
+            {isMobile && (
+                    <div className="mobile-throw-items">
+                        <ThrowItems setSelectedThrowItem={setSelectedThrowItem} />
+                    </div>
+                )}
             <div className="action-holder">
-                <ThrowItems setSelectedThrowItem={setSelectedThrowItem} />
+                {!isMobile && <ThrowItems setSelectedThrowItem={setSelectedThrowItem} />}
                 <div className="fire-button" onClick={handleClickFire}>
                     FIRE!
                 </div>
@@ -100,6 +116,7 @@ function ContactGame() {
                 >
                     {gameStart ? "RESTART" : "START"}
                 </div>
+                
                 <div className="info-holder">
                     <p>Timer: {timer.toFixed(1)}s</p>
                     <p>Target Window: {["Left", "Center", "Right"][windowNum]}</p>

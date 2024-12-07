@@ -268,3 +268,253 @@
 .egg-pic {
     z-index: 3;
 } */
+
+@media (max-width: 480px) {
+    .contact-game-wrapper {
+        position: relative;
+        text-align: center;
+        margin: 20px auto;
+        width: 80%;
+        max-width: 1000px; 
+    }
+    
+    
+    
+    .game-information-container {
+        width: 100%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .game-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Yikes;
+        color: yellow;
+        font-size: 2rem;
+        width: 250px;
+        height: 40px;
+        padding: 5px;
+    }
+    
+    .game-sub-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Yikes;
+        color: yellow;
+        font-size: 1rem;
+        width: 250px;
+        height: 25px;
+        padding: 5px;
+    }
+    
+    .instructions {
+        color: white;
+    }
+    
+    .input {
+        width: 300px;
+        height: 200px;
+        margin-top: 15px;
+    }
+    
+    .splat-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: auto;
+        z-index: 1000;
+        cursor: pointer;
+    }
+    
+    
+    .action-holder {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .fire-button {
+        height: 100px;
+        width: 100px;
+        background: linear-gradient(to top, rgb(75, 1, 1), rgb(253, 37, 37));
+        border-radius: 50%;
+        color: yellow;
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 0.5px;
+        font-family: 'Yikes';
+        font-size: 2.3rem;
+        border: 5px solid grey;
+        text-align: center;
+        padding-top: 25px;
+        padding-left: 5px;
+        cursor: pointer;
+    }
+    
+    .fire-button:hover {
+        background: linear-gradient(to top, rgb(2, 83, 50), rgb(37, 253, 73));
+        color: blueviolet;
+    }
+    
+    .start-button {
+        margin: 10px;
+        cursor: pointer;
+        width: 150px;
+        height: 100px;
+        background: linear-gradient(to top, rgb(18, 120, 128), rgb(75, 230, 241));
+        color: blueviolet;
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 0.5px;
+        font-family: 'Yikes';
+        font-size: 2.3rem;
+        border: 5px solid blueviolet;
+        border-radius: 30px;
+        text-align: center;
+        padding-top: 25px;
+    }
+    
+    .start-button:hover {
+        background: linear-gradient(to top, rgb(87, 12, 94), rgb(222, 42, 238));
+        color: aqua;
+        border: 5px solid aqua;
+    }
+    
+    .info-holder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        width: 200px;
+    }
+    
+    .window-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+    
+    .window {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgray;
+        border: 2px solid gray;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+        position: relative;
+    }
+    
+    .window img {
+        display: none; /* Default: hide all face images */
+    }
+    
+    .window img.visible {
+        display: block; /* Show when 'visible' class is applied */
+    }
+    
+    .hand-indicator {
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: auto;
+        z-index: 2;
+        animation: bounce 0.5s infinite alternate;
+    }
+    
+    .face {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    
+    @keyframes bounce {
+        from {
+            transform: translateX(-50%) translateY(0);
+        }
+        to {
+            transform: translateX(-50%) translateY(-10px);
+        }
+    }
+    
+    .throw-items-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 450px;
+        height: 150px;
+        background-color: none;
+    }
+    
+    .selection-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        width: 90%;
+        height: 70%;
+        background: linear-gradient(to top, rgb(78, 39, 2), rgb(194, 119, 49));
+        border-radius: 30px;
+        border: 2px solid white;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .individual-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* margin: -80px; */
+        /* position: relative; */
+        /* z-index: 1; */
+        width: 125px;
+    }
+    
+    .selection-name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -20px;
+        color: yellow;
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 0.5px;
+        font-family: 'Yikes';
+        font-size: 1.5rem;
+        transform: rotate(-30deg);
+        overflow: visible;
+        white-space: nowrap;
+        text-shadow: 1px 1px 2px black;
+        z-index: 2;
+    }
+    
+    .selection-pic {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        top: -35px;
+        z-index: 3;
+        /* background-color: red; */
+    }
+    
+}

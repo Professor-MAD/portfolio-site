@@ -322,6 +322,7 @@
     
     .instructions {
         color: white;
+        font-size: .65rem;
     }
     
     .input {
@@ -405,7 +406,6 @@
         color: white;
         width: 100%;
         font-size: 1rem;
-      
     }
     
     .window-wrapper {

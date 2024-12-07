@@ -12,6 +12,7 @@ function Footer() {
             </div>
 
             {/* Social Icons */}
+            <div className="info-container">
             <ul className="social-icon">
                 <li className="social-icon__item">
                     <a className="social-icon__link" href="#">
@@ -35,8 +36,8 @@ function Footer() {
                 </li>
             </ul>
 
-            {/* Menu Links */}
-            <ul className="menu">
+             {/* Menu Links */}
+             <ul className="menu">
                 <li className="menu__item">
                     <a className="menu__link" href="#">
                         Home
@@ -66,6 +67,10 @@ function Footer() {
 
             {/* Footer Text */}
             <p>&copy;2024 Your Name | All Rights Reserved</p>
+            </div>
+            
+
+           
         </footer>
     );
 }

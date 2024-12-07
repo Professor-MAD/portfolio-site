@@ -90,11 +90,13 @@ function ContactGame() {
                 />
             )}
             <HandPosition
-                handPosition={handPosition}
-                setHandPosition={setHandPosition}
-                windowNum={windowNum}
-                selectedThrowItem={selectedThrowItem}
-            />
+    handPosition={handPosition}
+    setHandPosition={setHandPosition}
+    windowNum={windowNum}
+    selectedThrowItem={selectedThrowItem}
+    isMobile={isMobile} // Pass the isMobile prop
+/>
+
             {isMobile && (
                     <div className="mobile-throw-items">
                         <ThrowItems setSelectedThrowItem={setSelectedThrowItem} />

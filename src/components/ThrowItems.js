@@ -16,7 +16,7 @@ function ThrowItems({ setSelectedThrowItem }) {
                             </defs>
                             <text
                                 fill="yellow"
-                                fontSize="24"
+                                className="throw-item-text"
                                 fontFamily="Yikes"
                                 stroke="black"
                                 strokeWidth="0.5"
@@ -53,7 +53,7 @@ function ThrowItems({ setSelectedThrowItem }) {
                             </defs>
                             <text
                                 fill="yellow"
-                                fontSize="24"
+                                className="throw-item-text"
                                 fontFamily="Yikes"
                                 stroke="black"
                                 strokeWidth="0.5"
@@ -90,7 +90,7 @@ function ThrowItems({ setSelectedThrowItem }) {
                             </defs>
                             <text
                                 fill="yellow"
-                                fontSize="24"
+                                className="throw-item-text"
                                 fontFamily="Yikes"
                                 stroke="black"
                                 strokeWidth="0.5"

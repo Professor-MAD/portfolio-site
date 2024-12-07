@@ -1,3 +1,120 @@
-.footer-wrapper {
-    color: white;
+/* General Styling */
+.footer {
+    position: relative;
+    width: 100%;
+    /* background: #3586ff; */
+    min-height: 200px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Wave Styling */
+.waves {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: url("https://i.ibb.co/wQZVxxk/wave.png");
+    background-size: 1000px 100px;
+    animation: animateWaves 8s linear infinite;
+}
+
+#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+}
+
+#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation-delay: -2s;
+}
+
+#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation-delay: -4s;
+}
+
+#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation-delay: -6s;
+}
+
+/* Social Icons */
+.social-icon {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.social-icon__item {
+    list-style: none;
+}
+
+.social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.social-icon__link:hover {
+    transform: translateY(-10px);
+}
+
+/* Menu Links */
+.menu {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.menu__item {
+    list-style: none;
+}
+
+.menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: 0.5s;
+}
+
+.menu__link:hover {
+    opacity: 1;
+}
+
+/* Footer Text */
+.footer p {
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* Animation */
+@keyframes animateWaves {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0;
+    }
 }

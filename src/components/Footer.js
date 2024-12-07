@@ -45,17 +45,12 @@ function Footer() {
                 </li>
                 <li className="menu__item">
                     <a className="menu__link" href="#">
+                        Work
+                    </a>
+                </li>
+                <li className="menu__item">
+                    <a className="menu__link" href="#">
                         About
-                    </a>
-                </li>
-                <li className="menu__item">
-                    <a className="menu__link" href="#">
-                        Services
-                    </a>
-                </li>
-                <li className="menu__item">
-                    <a className="menu__link" href="#">
-                        Team
                     </a>
                 </li>
                 <li className="menu__item">
@@ -66,7 +61,7 @@ function Footer() {
             </ul>
 
             {/* Footer Text */}
-            <p>&copy;2024 Your Name | All Rights Reserved</p>
+            <p>&copy;2024 Michael Dioguardi | All Rights Reserved</p>
             </div>
             
 

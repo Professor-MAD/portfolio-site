@@ -100,6 +100,11 @@ function ContactGame() {
                         <ThrowItems setSelectedThrowItem={setSelectedThrowItem} />
                     </div>
                 )}
+            {isMobile && (<div className="info-holder">
+                    <p>Timer: {timer.toFixed(1)}s</p>
+                    <p>Target Window: {["Left", "Center", "Right"][windowNum]}</p>
+                    <p>Your Position: {["Left", "Center", "Right"][handPosition]}</p>
+                </div>)}    
             <div className="action-holder">
                 {!isMobile && <ThrowItems setSelectedThrowItem={setSelectedThrowItem} />}
                 <div className="fire-button" onClick={handleClickFire}>
@@ -116,12 +121,12 @@ function ContactGame() {
                 >
                     {gameStart ? "RESTART" : "START"}
                 </div>
-                
-                <div className="info-holder">
+                {!isMobile && (<div className="info-holder">
                     <p>Timer: {timer.toFixed(1)}s</p>
                     <p>Target Window: {["Left", "Center", "Right"][windowNum]}</p>
                     <p>Your Position: {["Left", "Center", "Right"][handPosition]}</p>
-                </div>
+                </div>)}
+                
             </div>
         </div>
     );

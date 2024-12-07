@@ -2,8 +2,8 @@
     position: relative;
     text-align: center;
     margin: 20px auto;
-    width: 80%;
-    max-width: 1000px; 
+    width: 90%;
+    /* max-width: 1000px; */
 }
 
 
@@ -278,7 +278,7 @@
         position: relative;
         text-align: center;
         margin: 20px auto;
-        width: 80%;
+        width: 100%;
         max-width: 1000px;
         overflow: hidden; /* Prevents overflow */ 
     }
@@ -403,8 +403,9 @@
         justify-content: center;
         align-items: center;
         color: white;
-        width: 400px;
-        font-size: .5rem;
+        width: 100%;
+        font-size: 1rem;
+      
     }
     
     .window-wrapper {
@@ -468,11 +469,12 @@
         margin-top: 20px;
         display: flex;
         justify-content: center;
+        height: 95px;
     }
 
     .throw-items-wrapper {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         width: 100%;

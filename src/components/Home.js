@@ -9,7 +9,7 @@ function Home() {
             <div className="home-left">
                 <div className="Im">I'm</div>
                 <div className="name">MICHAEL DIOGUARDI</div>
-                <div className="description">A coding “jack” with a focus on developing front-end designs that are simple and memorable.</div>
+                <div className="description">A coding jack with a focus on developing front-end designs that are simple and memorable.</div>
                 <div className="projects-button">See My Projects</div>
             </div>
             <div className="home-right">

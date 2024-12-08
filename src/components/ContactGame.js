@@ -13,9 +13,10 @@ function ContactGame() {
     const [handPosition, setHandPosition] = useState(0);
     const [selectedThrowItem, setSelectedThrowItem] = useState("tomato");
     const [message, setMessage] = useState(defaultMessage);
+    const [name, setName] = useState(""); // State for name
+    const [email, setEmail] = useState(""); // State for email
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 480); // Initial check
 
-    // Detect window resize and update `isMobile`
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 480);
@@ -37,10 +38,9 @@ function ContactGame() {
         }
     }, [gameStart]);
 
-    // Auto-reset game when revealSplat is true
     useEffect(() => {
         if (revealSplat) {
-            console.log("Message Sent:", message); // Message sent behind the scenes
+            console.log("Message Sent:", { name, email, message }); // Message sent behind the scenes
 
             const resetTimeout = setTimeout(() => {
                 setGameStart(false);
@@ -50,7 +50,9 @@ function ContactGame() {
                 setWindowNum(null);
                 setHandPosition(0);
                 setMessage(defaultMessage); // Reset the message
-            }, 2000); // Wait 2 seconds before resetting the game
+                setName(""); // Reset name
+                setEmail(""); // Reset email
+            }, 2000);
 
             return () => clearTimeout(resetTimeout);
         }
@@ -60,6 +62,19 @@ function ContactGame() {
         if (windowNum === handPosition) {
             setGameIsWon(true);
             setRevealSplat(true);
+
+            // Submit data to backend
+            fetch("http://localhost:3000/api/submit-message", { // Use the correct backend URL
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ name, email, message }),
+            })
+                .then((res) => res.json())
+                .then((data) => console.log("Response:", data))
+                .catch((err) => console.error("Error:", err));
+            
         }
     };
 
@@ -69,19 +84,35 @@ function ContactGame() {
                 <div className="game-title">SPLAT ATTACK!</div>
                 <div className="game-sub-title">MESSAGE DELIVERY SERVICE</div>
                 <div className="instructions">
-                    <p>1. Write your message</p>
-                    <p>2. Choose your projectile</p>
-                    <p>3. Press start</p>
-                    <p>Objective: Use the Arrow Keys on your keyboard to move your hand. </p>
-                    <p>Tap the window to select for mobile.</p>
-                    <p>Press Fire! when you're ready to throw. Get a splat and your message is sent!</p>
+                    <p>1. Enter your name and email</p>
+                    <p>2. Write your message</p>
+                    <p>3. Choose your projectile</p>
+                    <p>4. Press start and fire!</p>
+                    <p>Objective: Get a splat to send your message!</p>
                 </div>
             </div>
+            <div className="input-holder">
+            <input
+                type="text"
+                className="input input-name"
+                placeholder="Your Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+            />
+            <input
+                type="email"
+                className="input input-email"
+                placeholder="Your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+            />
             <textarea
                 className="input"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
             />
+            </div>
+            
             {revealSplat && (
                 <img
                     className="splat-image"
@@ -91,23 +122,24 @@ function ContactGame() {
                 />
             )}
             <HandPosition
-    handPosition={handPosition}
-    setHandPosition={setHandPosition}
-    windowNum={windowNum}
-    selectedThrowItem={selectedThrowItem}
-    isMobile={isMobile} // Pass the isMobile prop
-/>
-
+                handPosition={handPosition}
+                setHandPosition={setHandPosition}
+                windowNum={windowNum}
+                selectedThrowItem={selectedThrowItem}
+                isMobile={isMobile}
+            />
             {isMobile && (
-                    <div className="mobile-throw-items">
-                        <ThrowItems setSelectedThrowItem={setSelectedThrowItem} />
-                    </div>
-                )}
-            {isMobile && (<div className="info-holder">
+                <div className="mobile-throw-items">
+                    <ThrowItems setSelectedThrowItem={setSelectedThrowItem} />
+                </div>
+            )}
+            {isMobile && (
+                <div className="info-holder">
                     <p>Timer: {timer.toFixed(1)}s</p>
                     <p>Target Window: {["Left", "Center", "Right"][windowNum]}</p>
                     <p>Your Position: {["Left", "Center", "Right"][handPosition]}</p>
-                </div>)}    
+                </div>
+            )}
             <div className="action-holder">
                 {!isMobile && <ThrowItems setSelectedThrowItem={setSelectedThrowItem} />}
                 <div className="fire-button" onClick={handleClickFire}>
@@ -124,12 +156,13 @@ function ContactGame() {
                 >
                     {gameStart ? "RESTART" : "START"}
                 </div>
-                {!isMobile && (<div className="info-holder">
-                    <p>Timer: {timer.toFixed(1)}s</p>
-                    <p>Target Window: {["Left", "Center", "Right"][windowNum]}</p>
-                    <p>Your Position: {["Left", "Center", "Right"][handPosition]}</p>
-                </div>)}
-                
+                {!isMobile && (
+                    <div className="info-holder">
+                        <p>Timer: {timer.toFixed(1)}s</p>
+                        <p>Target Window: {["Left", "Center", "Right"][windowNum]}</p>
+                        <p>Your Position: {["Left", "Center", "Right"][handPosition]}</p>
+                    </div>
+                )}
             </div>
         </div>
     );

@@ -53,6 +53,21 @@
     margin-top: 15px;
 }
 
+.input-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-name {
+    height: 30px;
+}
+
+.input-email {
+    height: 30px
+}
+
 .splat-image {
     position: absolute;
     top: 50%;
@@ -537,5 +552,20 @@
     
     .throw-item-text {
         font-size: 15px;
+    }
+
+    .input-holder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .input-name {
+        height: 30px;
+    }
+    
+    .input-email {
+        height: 30px
     }
 }

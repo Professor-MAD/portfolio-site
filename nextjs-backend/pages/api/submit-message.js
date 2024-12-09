@@ -1,14 +1,42 @@
 import { Pool } from "pg";
+import Cors from "cors";
 
+// Initialize the PostgreSQL connection
 const pool = new Pool({
     user: "postgres",
     host: "localhost",
     database: "portfolio_messages",
-    password: "new_password", // Replace with your actual password
+    password: "new_password",
     port: 5432,
 });
 
+// Initialize the CORS middleware
+const cors = Cors({
+    origin: ["https://portfolio-site-c4rd.vercel.app"], // Replace with your frontend's live URL
+    methods: ["POST", "GET", "HEAD"],
+});
+
+// Helper function to run middleware
+function runMiddleware(req, res, fn) {
+    return new Promise((resolve, reject) => {
+        fn(req, res, (result) => {
+            if (result instanceof Error) {
+                return reject(result);
+            }
+            return resolve(result);
+        });
+    });
+}
+
 export default async function handler(req, res) {
+    // Run CORS middleware
+    try {
+        await runMiddleware(req, res, cors);
+    } catch (error) {
+        console.error("CORS Error:", error.message);
+        return res.status(500).json({ error: "Failed to run CORS middleware" });
+    }
+
     if (req.method === "POST") {
         const { name, email, message } = req.body;
 

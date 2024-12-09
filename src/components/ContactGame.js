@@ -64,7 +64,7 @@ function ContactGame() {
             setRevealSplat(true);
 
             // Submit data to backend
-            fetch("https://portfolio-site-c4rd.vercel.app/api/submit-message", {
+            fetch("https://portfolio-site-eta-ashy.vercel.app/api/submit-message", { // Backend URL
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -74,6 +74,7 @@ function ContactGame() {
                 .then((res) => res.json())
                 .then((data) => console.log("Response:", data))
                 .catch((err) => console.error("Error:", err));
+            
         }
     };
 

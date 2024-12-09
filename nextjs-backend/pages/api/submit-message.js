@@ -10,16 +10,20 @@ const pool = new Pool({
 });
 
 // Helper function to set CORS headers
-const setCorsHeaders = (res) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://portfolio-site-c4rd.vercel.app"); // Update this to match your frontend URL
+const setCorsHeaders = (req, res) => {
+    const allowedOrigins = ["https://portfolio-site-c4rd.vercel.app"];
+    const origin = req.headers.origin;
+
+    if (allowedOrigins.includes(origin)) {
+        res.setHeader("Access-Control-Allow-Origin", origin);
+    }
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
     res.setHeader("Access-Control-Max-Age", "86400"); // Cache preflight response for 24 hours
 };
 
 export default async function handler(req, res) {
-    // Add CORS headers to all responses
-    setCorsHeaders(res);
+    setCorsHeaders(req, res); // Set CORS headers
 
     if (req.method === "OPTIONS") {
         // Handle preflight requests

@@ -1,5 +1,6 @@
 import { Pool } from "pg";
 
+// PostgreSQL connection pool setup
 const pool = new Pool({
     user: "postgres",
     host: "localhost",
@@ -8,14 +9,20 @@ const pool = new Pool({
     port: 5432,
 });
 
-export default async function handler(req, res) {
-    // Add CORS headers for all requests
-    res.setHeader("Access-Control-Allow-Origin", "https://portfolio-site-c4rd.vercel.app");
+// Helper function to set CORS headers
+const setCorsHeaders = (res) => {
+    res.setHeader("Access-Control-Allow-Origin", "https://portfolio-site-c4rd.vercel.app"); // Update this to match your frontend URL
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With");
+    res.setHeader("Access-Control-Max-Age", "86400"); // Cache preflight response for 24 hours
+};
+
+export default async function handler(req, res) {
+    // Add CORS headers to all responses
+    setCorsHeaders(res);
 
     if (req.method === "OPTIONS") {
-        // Handle preflight request
+        // Handle preflight requests
         res.status(200).end();
         return;
     }

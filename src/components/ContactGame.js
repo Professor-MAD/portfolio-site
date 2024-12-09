@@ -103,6 +103,7 @@ function ContactGame() {
             </div>
             <div className="input-holder">
             <input
+                id="name"
                 type="text"
                 className="input input-name"
                 placeholder="Your Name"
@@ -110,6 +111,7 @@ function ContactGame() {
                 onChange={(e) => setName(e.target.value)}
             />
             <input
+                id="email"
                 type="email"
                 className="input input-email"
                 placeholder="Your Email"
@@ -117,6 +119,7 @@ function ContactGame() {
                 onChange={(e) => setEmail(e.target.value)}
             />
             <textarea
+                id="text"
                 className="input"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}

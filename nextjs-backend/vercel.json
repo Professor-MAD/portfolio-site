@@ -8,7 +8,7 @@
   ],
   "routes": [
       {
-          "src": "/api/(.*)",
+          "src": "/api/submit-message",
           "dest": "nextjs-backend/api/submit-message.js",
           "methods": ["GET", "POST", "OPTIONS"],
           "headers": {

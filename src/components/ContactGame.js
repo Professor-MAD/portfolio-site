@@ -64,16 +64,22 @@ function ContactGame() {
             setRevealSplat(true);
 
             // Submit data to backend
-            fetch("https://portfolio-site-eta-ashy.vercel.app/api/submit-message", { // Backend URL
+            fetch("https://portfolio-site-eta-ashy.vercel.app/api/submit-message", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({ name, email, message }),
             })
-                .then((res) => res.json())
+                .then((res) => {
+                    if (!res.ok) {
+                        throw new Error(`HTTP error! status: ${res.status}`);
+                    }
+                    return res.json();
+                })
                 .then((data) => console.log("Response:", data))
-                .catch((err) => console.error("Error:", err));
+                .catch((err) => console.error("Fetch Error:", err));
+            
             
         }
     };

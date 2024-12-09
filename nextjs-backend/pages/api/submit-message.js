@@ -16,23 +16,32 @@ const setCorsHeaders = (req, res) => {
 
     if (allowedOrigins.includes(origin)) {
         res.setHeader("Access-Control-Allow-Origin", origin);
+    } else {
+        res.setHeader("Access-Control-Allow-Origin", "null"); // Block disallowed origins
     }
+
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-    res.setHeader("Access-Control-Max-Age", "86400"); // Cache preflight response for 24 hours
+    res.setHeader("Access-Control-Max-Age", "86400");
 };
 
-export default async function handler(req, res) {
-    setCorsHeaders(req, res); // Set CORS headers
 
+export default async function handler(req, res) {
+    console.log("Incoming Request:", req.method, req.headers.origin);
+
+    // Handle preflight requests
     if (req.method === "OPTIONS") {
-        // Handle preflight requests
-        res.status(200).end();
-        return;
+        console.log("Handling preflight (OPTIONS)");
+        res.setHeader("Access-Control-Allow-Origin", "https://portfolio-site-c4rd.vercel.app");
+        res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+        res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+        return res.status(200).end();
     }
 
+    // Proceed for POST requests
     if (req.method === "POST") {
         const { name, email, message } = req.body;
+        console.log("POST Body:", req.body);
 
         if (!name || !email || !message) {
             return res.status(400).json({ error: "Missing required fields" });
@@ -46,12 +55,15 @@ export default async function handler(req, res) {
             const values = [name, email, message];
             const result = await pool.query(query, values);
 
+            console.log("Database Insert Result:", result.rows[0]);
             res.status(200).json({ message: "Message submitted successfully", data: result.rows[0] });
         } catch (error) {
             console.error("Database Error:", error.message);
             res.status(500).json({ error: "Internal Server Error" });
         }
     } else {
+        console.log("Method Not Allowed");
+        res.setHeader("Allow", "POST, OPTIONS");
         res.status(405).json({ error: "Method Not Allowed" });
     }
 }

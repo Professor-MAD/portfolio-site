@@ -13,9 +13,9 @@ function ContactGame() {
     const [handPosition, setHandPosition] = useState(0);
     const [selectedThrowItem, setSelectedThrowItem] = useState("tomato");
     const [message, setMessage] = useState(defaultMessage);
-    const [name, setName] = useState(""); // State for name
-    const [email, setEmail] = useState(""); // State for email
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 480); // Initial check
+    const [name, setName] = useState(""); 
+    const [email, setEmail] = useState("");
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
 
     useEffect(() => {
         const handleResize = () => {
@@ -74,8 +74,6 @@ function ContactGame() {
                 .then((res) => res.json())
                 .then((data) => console.log("Response:", data))
                 .catch((err) => console.error("Error:", err));
-            
-            
         }
     };
 

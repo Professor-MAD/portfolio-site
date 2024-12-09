@@ -1,7 +1,6 @@
 import { Pool } from "pg";
 import Cors from "cors";
 
-// Initialize the PostgreSQL connection
 const pool = new Pool({
     user: "postgres",
     host: "localhost",
@@ -10,13 +9,16 @@ const pool = new Pool({
     port: 5432,
 });
 
-// Initialize the CORS middleware
+// Update the CORS configuration
 const cors = Cors({
-    origin: ["https://portfolio-site-c4rd.vercel.app"], // Replace with your frontend's live URL
+    origin: [
+        "https://portfolio-site-c4rd.vercel.app", // Primary frontend URL
+        "https://portfolio-site-c4rd-7mpgh1cqs-professor-mads-projects.vercel.app", // New frontend URL
+    ],
     methods: ["POST", "GET", "HEAD"],
 });
 
-// Helper function to run middleware
+// Middleware runner
 function runMiddleware(req, res, fn) {
     return new Promise((resolve, reject) => {
         fn(req, res, (result) => {
@@ -29,7 +31,6 @@ function runMiddleware(req, res, fn) {
 }
 
 export default async function handler(req, res) {
-    // Run CORS middleware
     try {
         await runMiddleware(req, res, cors);
     } catch (error) {

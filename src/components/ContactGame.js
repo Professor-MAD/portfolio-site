@@ -62,7 +62,13 @@ function ContactGame() {
         if (windowNum === handPosition) {
             setGameIsWon(true);
             setRevealSplat(true);
-
+    
+            // Ensure valid input
+            if (!name || !email || !message) {
+                console.error("Error: Missing required fields.");
+                return;
+            }
+    
             // Submit data to backend
             fetch("https://portfolio-site-eta-ashy.vercel.app/api/submit-message", {
                 method: "POST",
@@ -79,11 +85,9 @@ function ContactGame() {
                 })
                 .then((data) => console.log("Response:", data))
                 .catch((err) => console.error("Fetch Error:", err));
-            
-            
         }
     };
-
+    
     return (
         <div className="contact-game-wrapper">
             <div className="game-information-container">
@@ -99,24 +103,23 @@ function ContactGame() {
             </div>
             <div className="input-holder">
             <input
-                type="text"
-                className="input input-name"
-                placeholder="Your Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-            />
-            <input
-                type="email"
-                className="input input-email"
-                placeholder="Your Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-            />
-            <textarea
-                className="input"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-            />
+    type="text"
+    placeholder="Your Name"
+    value={name}
+    onChange={(e) => setName(e.target.value)}
+/>
+<input
+    type="email"
+    placeholder="Your Email"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+/>
+<textarea
+    placeholder="Write your message"
+    value={message}
+    onChange={(e) => setMessage(e.target.value)}
+/>
+
             </div>
             
             {revealSplat && (

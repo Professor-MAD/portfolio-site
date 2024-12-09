@@ -17,14 +17,13 @@ const setCorsHeaders = (req, res) => {
     if (allowedOrigins.includes(origin)) {
         res.setHeader("Access-Control-Allow-Origin", origin);
     } else {
-        res.setHeader("Access-Control-Allow-Origin", "null"); // Block disallowed origins
+        res.setHeader("Access-Control-Allow-Origin", "null");
     }
 
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-    res.setHeader("Access-Control-Max-Age", "86400");
+    res.setHeader("Access-Control-Max-Age", "86400"); // Cache preflight for 24 hours
 };
-
 
 export default async function handler(req, res) {
     console.log("Incoming Request:", req.method, req.headers.origin);

@@ -1,21 +1,21 @@
 {
-  "version": 2,
-  "builds": [
+    "version": 2,
+    "builds": [
       {
-          "src": "nextjs-backend/api/submit-message.js",
-          "use": "@vercel/node"
+        "src": "pages/api/submit-message.js",
+        "use": "@vercel/node"
       }
-  ],
-  "routes": [
+    ],
+    "routes": [
       {
-          "src": "/api/submit-message",
-          "dest": "nextjs-backend/api/submit-message.js",
-          "methods": ["GET", "POST", "OPTIONS"],
-          "headers": {
-              "Access-Control-Allow-Origin": "https://portfolio-site-c4rd.vercel.app",
-              "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-              "Access-Control-Allow-Headers": "Content-Type, Authorization"
-          }
+        "src": "/api/(.*)",
+        "dest": "/api/$1",
+        "headers": {
+          "Access-Control-Allow-Origin": "https://portfolio-site-c4rd.vercel.app",
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization"
+        }
       }
-  ]
-}
+    ]
+  }
+  

@@ -2,11 +2,11 @@ import { Pool } from "pg";
 
 // PostgreSQL connection pool setup
 const pool = new Pool({
-    user: "postgres",
-    host: "localhost",
-    database: "portfolio_messages",
-    password: "new_password",
-    port: 5432,
+    user: process.env.PG_USER || "postgres",
+    host: process.env.PG_HOST || "localhost", // Ensure correct host in production
+    database: process.env.PG_DATABASE || "portfolio_messages",
+    password: process.env.PG_PASSWORD || "new_password",
+    port: process.env.PG_PORT || 5432,
 });
 
 // Helper function to set CORS headers
@@ -17,6 +17,7 @@ const setCorsHeaders = (req, res) => {
     if (allowedOrigins.includes(origin)) {
         res.setHeader("Access-Control-Allow-Origin", origin);
     } else {
+        console.warn("Disallowed origin:", origin);
         res.setHeader("Access-Control-Allow-Origin", "null"); // Block disallowed origins
     }
 
@@ -25,25 +26,28 @@ const setCorsHeaders = (req, res) => {
     res.setHeader("Access-Control-Max-Age", "86400");
 };
 
-
 export default async function handler(req, res) {
     console.log("Incoming Request:", req.method, req.headers.origin);
+
+    // Apply CORS headers
+    setCorsHeaders(req, res);
 
     // Handle preflight requests
     if (req.method === "OPTIONS") {
         console.log("Handling preflight (OPTIONS)");
-        res.setHeader("Access-Control-Allow-Origin", "https://portfolio-site-c4rd.vercel.app");
-        res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-        res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
         return res.status(200).end();
     }
 
-    // Proceed for POST requests
+    // Handle POST requests
     if (req.method === "POST") {
         const { name, email, message } = req.body;
+
+        // Debugging logs for request body
         console.log("POST Body:", req.body);
 
+        // Validate request body
         if (!name || !email || !message) {
+            console.error("Validation Error: Missing required fields");
             return res.status(400).json({ error: "Missing required fields" });
         }
 
@@ -59,7 +63,7 @@ export default async function handler(req, res) {
             res.status(200).json({ message: "Message submitted successfully", data: result.rows[0] });
         } catch (error) {
             console.error("Database Error:", error.message);
-            res.status(500).json({ error: "Internal Server Error" });
+            res.status(500).json({ error: "Internal Server Error", details: error.message });
         }
     } else {
         console.log("Method Not Allowed");

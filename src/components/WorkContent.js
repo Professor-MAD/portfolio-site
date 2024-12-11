@@ -48,7 +48,7 @@ const workContent = [
         ],
         description: "Professormad.com is the homepage for the comedic adult-comic book “The Beautiful Shamaryayamayamays of Shnerfadalailisexinr.” The website comes with an e-commerce interface, browser game page, and the fastest-growing public fart-noise MP3 library—all user-generated. An artistic project of the infamous PROFESSOR MAD, the IP is accompanied by a video series and merch line. Buy your copy today and immediately regret your decision! Or maybe just stop by to play DINO NUKE COCKROACH.",
         fontFamily: "Yikes",
-        fontSize: ".75rem",
+        fontSize: ".7rem",
         desktopFontSize: "3rem"
     },
 

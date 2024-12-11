@@ -3,8 +3,8 @@ const workContent = [
         title: "ManaMind: The MTG Stockfish",
         logo: "/images/mana-mind.png",
         screenshot: "/images/mana-mind-shot.png",
-        github: "/images/github.png",
-        link: "/images/link.png",
+        github: "https://github.com/Professor-MAD/ManaMind-MTG-Stockfish",
+        link: "https://github.com/Professor-MAD/ManaMind-MTG-Stockfish",
         icons: [
             "/images/c.png",
             "/images/clang.png"
@@ -19,8 +19,8 @@ const workContent = [
         title: "Satanic Agenda: Full-Service Home Page",
         logo: "/images/satan-todo-favicon.png",
         screenshot: "/images/satan-shot.png",
-        github: "/images/github.png",
-        link: "/images/link.png",
+        github: "https://github.com/Professor-MAD/Satan-s-Todo-App",
+        link: "https://satanicagenda.com/",
         icons: [
             "/images/react.png",
             "/images/css.png",
@@ -37,8 +37,8 @@ const workContent = [
         title: "PROFESSOR MAD: ONLINE COMIC BOOK STORE",
         logo: "/images/favicon-professor-mad.png",
         screenshot: "/images/mad-shot.png",
-        github: "/images/github.png",
-        link: "/images/link.png",
+        github: "https://github.com/Professor-MAD/Professor-MAD-s-Emporium",
+        link: "https://professormad.com/",
         icons: [
             "/images/html.png",
             "/images/css.png",
@@ -57,8 +57,8 @@ const workContent = [
         title: "D-Comply: Compliance Training Dashboard",
         logo: "/images/DComply-logo.png",
         screenshot: "/images/dcomply-shot.png",
-        github: "/images/github.png",
-        link: "/images/link.png",
+        github: "https://github.com/Professor-MAD",
+        link: "https://github.com/Professor-MAD",
         icons: [
             "/images/react.png",
             "/images/css.png",
@@ -77,8 +77,8 @@ const workContent = [
         title: "osr tolkien map: online map store",
         logo: "/images/osr-favicon.png",
         screenshot: "/images/osr.png",
-        github: "/images/github.png",
-        link: "/images/link.png",
+        github: "https://github.com/Professor-MAD",
+        link: "https://osr-tolkien-map.web.app/",
         icons: [
             "/images/html.png",
             "/images/css.png",
@@ -96,8 +96,8 @@ const workContent = [
         title: "DREAMCAST CENTRIFUGE: RANDOMIZER",
         logo: "/images/dreamcast-centrifuge.png",
         screenshot: "/images/dreamcast-shot.png",
-        github: "/images/github.png",
-        link: "/images/link.png",
+        github: "https://github.com/Professor-MAD",
+        link: "https://dreamcastcentrifuge.web.app/",
         icons: [
             "/images/html.png",
             "/images/css.png",

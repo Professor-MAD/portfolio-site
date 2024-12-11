@@ -6,10 +6,10 @@ function WorkItem({ title, logo, screenshot, github, link, icons, description, f
             <div className="container-left">
                 <img className="mana-mind" src={logo} alt={title} />
                 <img
-                        className="mana-mind-screenshot"
-                        src={screenshot}
-                        alt={`${title} Screenshot`}
-                    />
+                    className="mana-mind-screenshot"
+                    src={screenshot}
+                    alt={`${title} Screenshot`}
+                />
             </div>
             <div className="container-right">
                 <div
@@ -18,12 +18,14 @@ function WorkItem({ title, logo, screenshot, github, link, icons, description, f
                         fontFamily: fontFamily,
                         fontSize: `clamp(${fontSize}, calc(${fontSize} + 2vw), ${desktopFontSize})`,
                     }}
-                    
-                                      
                 >
                     {title}
-                    <img className="github" src={github} alt="GitHub" />
-                    <img className="link" src={link} alt="Link" />
+                    <a href={github} target="_blank" rel="noopener noreferrer">
+                        <img className="github" src="/images/github.png" alt="GitHub" />
+                    </a>
+                    <a href={link} target="_blank" rel="noopener noreferrer">
+                        <img className="link" src="/images/link.png" alt="Link" />
+                    </a>
                 </div>
                 <div className="container-right-bottom">
                     <div className="work-content">

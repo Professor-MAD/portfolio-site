@@ -239,6 +239,7 @@
         margin-top: 5px;
         padding-top: 5px;
         padding-left: 0px;
+        margin-bottom: 10px;
 
     }
 
@@ -266,7 +267,7 @@
         width: 15px;
         height: 15px;
         position: absolute;
-        top: 300px;
+        top: 330px;
         right: 23px;
         z-index: 100;
         cursor: pointer;
@@ -276,7 +277,7 @@
         width: 15px;
         height: 5px;
         position: absolute;
-        top: 305px;
+        top: 335px;
         right: 5px;
         z-index: 100;
         cursor: pointer;

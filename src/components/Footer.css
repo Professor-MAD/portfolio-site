@@ -105,13 +105,15 @@
     list-style: none;
 }
 
+
 .menu__link {
     font-size: 1.2rem;
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
-    opacity: 0.75;
+    /* opacity: 1; */
     transition: 0.5s;
+    -webkit-text-stroke: .25px black; /* Adds a black stroke to the text */
 }
 
 .menu__link:hover {

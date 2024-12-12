@@ -229,7 +229,7 @@
     .container-right-top {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         width: 100%;
         height: 20%;
@@ -239,8 +239,8 @@
         margin-top: 5px;
         padding-top: 5px;
         padding-left: 0px;
-        margin-bottom: 10px;
-
+        margin-bottom: 20px;
+        text-align: center;
     }
 
     /* .github {

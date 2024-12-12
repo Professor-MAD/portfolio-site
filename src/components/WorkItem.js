@@ -57,6 +57,16 @@ function WorkItem({ title, logo, screenshot, github, link, icons, description, f
                             {icons.map((icon, index) => (
                                 <img className="icon" src={icon} alt={`icon-${index}`} key={index} />
                             ))}
+                            {isMobile && (
+                                <div className="mobile-icons-wrapper">
+                                    <a href={github} target="_blank" rel="noopener noreferrer">
+                                        <img className="github-mobile" src="/images/github.png" alt="GitHub" />
+                                    </a>
+                                    <a href={link} target="_blank" rel="noopener noreferrer">
+                                        <img className="link-mobile" src="/images/link.png" alt="Link" />
+                                    </a>
+                                </div>
+                            )}
                         </div>
                         <div className="text">{description}</div>
                     </div>

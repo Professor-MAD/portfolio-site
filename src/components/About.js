@@ -20,7 +20,7 @@ function About() {
       {isMobile ? (
         <div className="teaching-wrapper">
           <div className="nouns-mobile">
-            <ul className="      noun-item">FATHER</ul>
+            <ul className="noun-item">FATHER</ul>
             <ul className="noun-item">HUSBAND</ul>
             <ul className="noun-item">PROFESSOR</ul>
             <ul className="noun-item">TEACHER</ul>
@@ -55,20 +55,33 @@ function About() {
               <img className="rec-icon-mobile" src="./images/bb.png" alt="bb" />
             </div>
             <div className="description-container-mobile">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-              velit, sed quia non numquam eius modi tempora incidunt ut labore
-              et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-              veniam, quis nostrum exercitationem ullam corporis suscipit
-              laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
-              vel eum iure reprehenderit qui in ea voluptate velit esse quam
-              nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-              voluptas nulla pariatur?
+              <p>
+                Thanks for taking the time to visit my portfolio website. When I
+                set out to make it, I wanted to answer one question, “What are
+                we getting with this guy?”
+              </p>
+              <p>
+                I want you to see the spectrum of my design, including my
+                personal predilection toward everything odd and wonderful. I
+                venture into these design aesthetics with science-fiction,
+                fantasy, horror, and comedy as my backdrops. As a veteran of the
+                “dial-up” era of the Internet, my understanding was shaped in a
+                simpler but bolder time, when websites did not conform, looked
+                different, memorable, and unique. The experience was on the user
+                to not only use the website but to feel novelty when visiting. I
+                miss that novelty in modern Internet surfing.
+              </p>
+              <p>
+                Novelty is what I strive for, with respect for and inclusion of
+                modern design and users. It’s what I will bring to your team. My
+                coding style is always focused on simplicity, providing
+                easy-to-read code to a range of talent to produce the best
+                ultimate product.
+              </p>
+              <p>
+                Now, don’t forget to drop me a line with Splat Attack! Seen
+                below.
+              </p>
             </div>
           </div>
         </div>
@@ -101,19 +114,31 @@ function About() {
           <img className="rec-icon" src="./images/bb.png" alt="bb" />
         </div>
         <div className="description-container">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-          qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-          dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
-          quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-          aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-          exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
-          ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in
-          ea voluptate velit esse quam nihil molestiae consequatur, vel illum
-          qui dolorem eum fugiat quo voluptas nulla pariatur?
+          <p>
+            Thanks for taking the time to visit my portfolio website. When I set
+            out to make it, I wanted to answer one question, “What are we
+            getting with this guy?”
+          </p>
+          <p>
+            I want you to see the spectrum of my design, including my personal
+            predilection toward everything odd and wonderful. I venture into
+            these design aesthetics with science-fiction, fantasy, horror, and
+            comedy as my backdrops. As a veteran of the “dial-up” era of the
+            Internet, my understanding was shaped in a simpler but bolder time,
+            when websites did not conform, looked different, memorable, and
+            unique. The experience was on the user to not only use the website
+            but to feel novelty when visiting. I miss that novelty in modern
+            Internet surfing.
+          </p>
+          <p>
+            Novelty is what I strive for, with respect for and inclusion of
+            modern design and users. It’s what I will bring to your team. My
+            coding style is always focused on simplicity, providing easy-to-read
+            code to a range of talent to produce the best ultimate product.
+          </p>
+          <p>
+            Now, don’t forget to drop me a line with Splat Attack! Seen below.
+          </p>
         </div>
       </div>
     </div>

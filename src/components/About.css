@@ -1,212 +1,223 @@
 .about-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 15px;
+  border-bottom: 2px solid white;
+}
+
+.teaching {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
+  width: 25%;
+  height: 100%;
+}
+
+.nouns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  margin: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 15px;
+}
+
+@font-face {
+  font-family: "Pertili";
+  src: url("./fonts/PERTILI.TTF") format("truetype");
+}
+
+.noun-item {
+  font-family: "Pertili";
+  font-size: 1.5rem;
+  color: white;
+  margin: 2px;
+}
+
+.description-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+}
+
+.recognition-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+  padding-top: 15px;
+}
+
+.rec-icon {
+  width: 150px;
+  height: 150px;
+}
+
+.eagle-icon {
+  width: 150px;
+  height: 200px;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: black;
+  background-color: turquoise;
+  height: 75%;
+  width: 100%;
+  margin: 20px;
+  box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
+  padding: 25px;
+  border-radius: 40px;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  font-weight: bold;
+}
+
+.description-container p {
+  text-indent: 20px; /* Indents the first line of the paragraph */
+  margin-bottom: 15px; /* Adds space between paragraphs */
+  line-height: 1.5; /* Adjust line height for better readability */
+}
+
+.description-container:hover {
+  border-color: turquoise;
+  box-shadow: 0 0 10px turquoise, 0 0 20px turquoise;
+}
+
+@media (max-width: 480px) {
+  .about-parent {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     padding-bottom: 15px;
     border-bottom: 2px solid white;
-}
+  }
 
-.teaching {
+  .teaching-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* margin-right: 10px; */
+  }
+
+  .teaching {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
     box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
-    width: 25%;
+    width: 90%;
     height: 100%;
-}
+  }
 
-.nouns {
+  .nouns-mobile {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 25%;
+    width: 100%;
     height: 100%;
-    margin: 10px;
     margin-left: 5px;
     margin-right: 5px;
-    padding: 15px;
-}
+    padding: 5px;
+    margin-top: 10px;
+    /* background-color: purple; */
+  }
 
-@font-face {
-    font-family: 'Pertili';
-    src: url('./fonts/PERTILI.TTF') format('truetype');
-}
-
-.noun-item {
-    font-family: 'Pertili';
-    font-size: 1.5rem;
+  .noun-item {
+    font-family: "Pertili";
+    font-size: 0.75rem;
     color: white;
     margin: 2px;
-}
+  }
 
-.description-parent {
+  .description-parent {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    margin-right: 10px;
+  }
+
+  .description-parent-mobile {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 40%;
+    width: 100%;
     height: 100%;
-}
+    margin-right: 10px;
+  }
 
-.recognition-container {
+  .recognition-container-mobile {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 25%;
-    padding-top: 15px;
-}
+    height: 15%;
+    padding-top: 25px;
+  }
 
-.rec-icon {
-    width: 150px;
-    height: 150px;
-}
+  .rec-icon-mobile {
+    width: 60px;
+    height: 60px;
+  }
 
-.eagle-icon {
-    width: 150px;
-    height: 200px;
-}
+  .eagle-icon-mobile {
+    width: 40px;
+    height: 55px;
+  }
 
-.description-container {
+  .description-container-mobile {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     color: black;
     background-color: turquoise;
-    height: 75%;
-    width: 100%;
-    margin: 20px;
+    height: 50%;
+    width: 95%;
     box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
-    padding: 25px;
+    padding: 15px;
     border-radius: 40px;
-    font-size: 1.2rem;
+    font-size: 0.7rem;
     font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-    border: 2px solid transparent;
-}
+    margin-top: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+  }
 
-.description-container:hover {
-    border-color: turquoise;
-    box-shadow: 0 0 10px turquoise, 0 0 20px turquoise;
-}
-
-
-@media (max-width: 480px) {
-    .about-parent {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        padding-bottom: 15px;
-        border-bottom: 2px solid white;
-    }
-    
-    .teaching-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        /* margin-right: 10px; */
-    }
-
-    .teaching {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10px;
-        margin-left: 10px;
-        box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
-        width: 90%;
-        height: 100%;
-    }
-    
-    .nouns-mobile {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        margin-left: 5px;
-        margin-right: 5px;
-        padding: 5px;
-        margin-top: 10px;
-        /* background-color: purple; */
-    }
-    
-    .noun-item {
-        font-family: 'Pertili';
-        font-size: .75rem;
-        color: white;
-        margin: 2px;
-    }
-    
-    .description-parent {
-        display: none;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        width: 70%;
-        height: 100%;
-        margin-right: 10px;
-    }
-
-    .description-parent-mobile {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        margin-right: 10px;
-    }
-    
-    .recognition-container-mobile {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 15%;
-        padding-top: 25px;
-
-    }
-    
-    .rec-icon-mobile {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .eagle-icon-mobile {
-        width: 40px;
-        height: 55px;
-    }
-    
-    .description-container-mobile {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        color: black;
-        background-color: turquoise;
-        height: 50%;
-        width: 95%;
-        box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
-        padding: 15px;
-        border-radius: 40px;
-        font-size: .5rem;
-        font-family: Arial, Helvetica, sans-serif;
-        margin-top: 20px;
-        margin-left: 10px;
-    }
-
+  .description-container-mobile p {
+    text-indent: 20px; /* Indents the first line of the paragraph */
+    margin-bottom: 15px; /* Adds space between paragraphs */
+    line-height: 1.5; /* Adjust line height for better readability */
+  }
 }

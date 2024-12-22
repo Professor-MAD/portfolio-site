@@ -17,7 +17,7 @@ const workContent = [
   {
     title: "Satanic Agenda: Full-Service Home Page",
     logo: "/images/satan-todo-favicon.png",
-    screenshot: "/images/satan-shot.png",
+    screenshot: "/images/satan-vid.webm",
     github: "https://github.com/Professor-MAD",
     link: "https://satanicagenda.com/",
     icons: [
@@ -31,7 +31,7 @@ const workContent = [
     fontFamily: "Street Devil",
     fontSize: ".4rem",
     desktopFontSize: "2.3rem",
-    useVideo: false, // Add this property
+    useVideo: true, // Add this property
   },
 
   {

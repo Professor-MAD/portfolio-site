@@ -30,7 +30,7 @@ const workContent = [
       "Satanic Agenda is a calendar app with a robust “todo” system, featuring an “upcoming” and “graveyard” mechanic. There are “scrolls” for larger texts and even a “Satan button,” which can be used to call Satan so he can yell at you to...err...motivate you. The app also comes with Hell Weather, Hell News, Hell Sports, and Hell Stocks, so you can be up to date on what’s happening in Hell. Users can use for free and their session will be saved, but to save forever, they must make an account.",
     fontFamily: "Street Devil",
     fontSize: ".4rem",
-    desktopFontSize: "2.3rem",
+    desktopFontSize: "2rem",
     useVideo: true, // Add this property
   },
 

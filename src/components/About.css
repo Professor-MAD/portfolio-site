@@ -219,8 +219,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    color: black;
-    background-color: turquoise;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.5);
     height: 50%;
     width: 95%;
     box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
@@ -230,13 +230,18 @@
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 20px;
     margin-left: 10px;
-    font-weight: bold;
+    font-weight: lighter;
   }
 
   .description-container-mobile p {
     text-indent: 20px; /* Indents the first line of the paragraph */
     margin-bottom: 15px; /* Adds space between paragraphs */
     line-height: 1.5; /* Adjust line height for better readability */
+  }
+
+  .description-container-mobile:hover {
+    border-color: turquoise;
+    box-shadow: 0 0 10px turquoise, 0 0 20px turquoise;
   }
 
   .bottom-container-web {

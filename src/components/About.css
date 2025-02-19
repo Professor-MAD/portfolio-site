@@ -1,10 +1,28 @@
 .about-parent {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding-bottom: 15px;
   border-bottom: 2px solid white;
+}
+
+.bottom-container-web {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
+
+.top-container-web {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100%;
 }
 
 .teaching {
@@ -78,10 +96,10 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  color: black;
-  background-color: turquoise;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.5);
   height: 75%;
-  width: 100%;
+  width: 75%;
   margin: 20px;
   box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
   padding: 25px;
@@ -90,7 +108,7 @@
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   border: 2px solid transparent;
-  font-weight: bold;
+  font-weight: lighter;
 }
 
 .description-container p {
@@ -219,5 +237,9 @@
     text-indent: 20px; /* Indents the first line of the paragraph */
     margin-bottom: 15px; /* Adds space between paragraphs */
     line-height: 1.5; /* Adjust line height for better readability */
+  }
+
+  .bottom-container-web {
+    display: none;
   }
 }

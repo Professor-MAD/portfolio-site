@@ -87,32 +87,41 @@ function About() {
         </div>
       ) : (
         <>
-          <img
-            className="teaching"
-            src="./images/teaching.jpg"
-            alt="teaching"
-          />
-          <div className="nouns">
-            <ul className="noun-item">FATHER</ul>
-            <ul className="noun-item">HUSBAND</ul>
-            <ul className="noun-item">PROFESSOR</ul>
-            <ul className="noun-item">TEACHER</ul>
-            <ul className="noun-item">EAGLE SCOUT</ul>
-            <ul className="noun-item">COACH</ul>
-            <ul className="noun-item">MENTOR</ul>
-            <ul className="noun-item">WRITER</ul>
-            <ul className="noun-item">ARTIST</ul>
-            <ul className="noun-item">ATHLETE</ul>
+          <div className="top-container-web">
+            <img
+              className="teaching"
+              src="./images/teaching.jpg"
+              alt="teaching"
+            />
+            <div className="nouns">
+              <ul className="noun-item">FATHER</ul>
+              <ul className="noun-item">HUSBAND</ul>
+              <ul className="noun-item">PROFESSOR</ul>
+              <ul className="noun-item">TEACHER</ul>
+              <ul className="noun-item">EAGLE SCOUT</ul>
+              <ul className="noun-item">COACH</ul>
+              <ul className="noun-item">MENTOR</ul>
+              <ul className="noun-item">WRITER</ul>
+              <ul className="noun-item">ARTIST</ul>
+              <ul className="noun-item">ATHLETE</ul>
+            </div>
+            <div className="description-parent">
+              <div className="recognition-container">
+                <img
+                  className="eagle-icon"
+                  src="./images/eagle.png"
+                  alt="eagle"
+                />
+                <img className="rec-icon" src="./images/ecc.png" alt="ecc" />
+                <img className="rec-icon" src="./images/30.png" alt="30" />
+                <img className="rec-icon" src="./images/bb.png" alt="bb" />
+              </div>
+            </div>
           </div>
         </>
       )}
-      <div className="description-parent">
-        <div className="recognition-container">
-          <img className="eagle-icon" src="./images/eagle.png" alt="eagle" />
-          <img className="rec-icon" src="./images/ecc.png" alt="ecc" />
-          <img className="rec-icon" src="./images/30.png" alt="30" />
-          <img className="rec-icon" src="./images/bb.png" alt="bb" />
-        </div>
+
+      <div className="bottom-container-web">
         <div className="description-container">
           <p>
             Thanks for taking the time to visit my portfolio website. When I set

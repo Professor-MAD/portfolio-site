@@ -77,6 +77,11 @@
   src: url("./fonts/CIND.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Bellfoods";
+  src: url("./fonts/Bellfoods.otf") format("opentype");
+}
+
 /* Title Text Here */
 .container-right-top {
   display: flex;

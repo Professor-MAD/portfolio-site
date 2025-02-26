@@ -15,6 +15,26 @@ const workContent = [
   },
 
   {
+    title: "Pantry Quest: Inventory and Shopping App",
+    logo: "/images/pantry-quest-logo.png",
+    screenshot: "/images/pq-sh.png",
+    github: "https://github.com/Professor-MAD/pantry-quest-frontD",
+    link: "https://github.com/Professor-MAD/pantry-quest-front",
+    icons: [
+      "/images/react.png",
+      "/images/expo.png",
+      "/images/next.png",
+      "/images/firebase.png",
+    ],
+    description:
+      "Satanic Agenda is a calendar app with a robust “todo” system, featuring an “upcoming” and “graveyard” mechanic. There are “scrolls” for larger texts and even a “Satan button,” which can be used to call Satan so he can yell at you to...err...motivate you. The app also comes with Hell Weather, Hell News, Hell Sports, and Hell Stocks, so you can be up to date on what’s happening in Hell. Users can use for free and their session will be saved, but to save forever, they must make an account.",
+    fontFamily: "Bellfoods",
+    fontSize: ".7rem",
+    desktopFontSize: "3rem",
+    useVideo: false, // Add this property
+  },
+
+  {
     title: "Satanic Agenda: Full-Service Home Page",
     logo: "/images/satan-todo-favicon.png",
     screenshot: "/images/satan-vid.webm",

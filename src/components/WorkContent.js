@@ -27,7 +27,7 @@ const workContent = [
       "/images/firebase.png",
     ],
     description:
-      "Satanic Agenda is a calendar app with a robust “todo” system, featuring an “upcoming” and “graveyard” mechanic. There are “scrolls” for larger texts and even a “Satan button,” which can be used to call Satan so he can yell at you to...err...motivate you. The app also comes with Hell Weather, Hell News, Hell Sports, and Hell Stocks, so you can be up to date on what’s happening in Hell. Users can use for free and their session will be saved, but to save forever, they must make an account.",
+      "Don’t you wish your shopping list would make itself? Pantry Quest makes your shopping lists for you by keeping track of what you have and generating a weekly grocery list from your inventory and recipes list. Add items to your inventory and fridge using the cutest UI you’ve ever seen. Type in the name, or add it by barcode, or use the AI feature to scan your entire pantry. Add recipes and schedule your shopping list generation. Users can share a household with another user and thereafter share their pantry and recipes. Great for working families and couples!",
     fontFamily: "Bellfoods",
     fontSize: ".7rem",
     desktopFontSize: "3rem",

@@ -379,7 +379,7 @@
     width: 50px; /* Adjust as needed */
     height: 50px; /* Adjust as needed */
     z-index: 5;
-    border-radius: 50%;
+    /* border-radius: 50%; */
   }
 
   .mobile-icons-wrapper {

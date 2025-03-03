@@ -14,15 +14,16 @@
 
 /* Modal Content */
 .modal-content {
-  background: white;
-  padding: 20px;
+  background-color: grey;
+  padding: 30px;
   border-radius: 10px;
-  width: 60%;
+  width: 90%;
   max-width: 600px;
-  text-align: center;
+  text-align: justify;
   position: relative;
-  color: black;
+  color: white;
   font-size: 1.2rem;
+  box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
 }
 
 /* Close Button */

@@ -12,7 +12,8 @@ function WorkItem({
   fontFamily,
   fontSize,
   desktopFontSize,
-  useVideo, // New prop to determine if video or image should be used
+  useVideo,
+  openModal,
 }) {
   const isMobile = useIsMobile();
 
@@ -111,7 +112,9 @@ function WorkItem({
                 </div>
               )}
             </div>
-            <div className="text">{description}</div>
+            <div className="text" onClick={() => openModal(description)}>
+              {description}
+            </div>
           </div>
         </div>
       </div>

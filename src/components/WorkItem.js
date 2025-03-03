@@ -1,3 +1,4 @@
+import { ExternalLink, Expand } from "lucide-react"; // Import icons
 import useIsMobile from "./hooks/useIsMobile";
 import "./WorkContainer.css";
 
@@ -39,6 +40,19 @@ function WorkItem({
               alt={`${title} Screenshot`}
             />
           )}
+
+          {/* Overlay Icons */}
+          <div className="screenshot-overlay">
+            {/* Click-Out Icon */}
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              <ExternalLink className="overlay-icon" />
+            </a>
+
+            {/* Expand Image Icon */}
+            <span onClick={() => openModal(screenshot)}>
+              <Expand className="overlay-icon" />
+            </span>
+          </div>
         </div>
       )}
 
@@ -79,6 +93,18 @@ function WorkItem({
               />
             )}
             <img className="mana-mind-logo-mobile" src={logo} alt={title} />
+
+            <div className="mobile-screenshot-overlay">
+              {/* Click-Out Icon */}
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="overlay-icon-mobile" />
+              </a>
+
+              {/* Expand Image Icon */}
+              <span onClick={() => openModal(screenshot)}>
+                <Expand className="overlay-icon-mobile" />
+              </span>
+            </div>
           </div>
         )}
 

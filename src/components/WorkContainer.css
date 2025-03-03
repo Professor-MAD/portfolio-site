@@ -46,6 +46,32 @@
   width: 70%;
   height: 100%;
 }
+/* Overlay Container for Icons */
+.screenshot-overlay {
+  position: absolute;
+  bottom: 10px;
+  right: 85px;
+  display: flex;
+  gap: 10px; /* Space between icons */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+  padding: 5px;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+/* Style Icons */
+.overlay-icon {
+  width: 24px;
+  height: 24px;
+  color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.overlay-icon:hover {
+  color: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
 
 @font-face {
   font-family: "Planewalker";
@@ -406,6 +432,32 @@
     z-index: 100;
     cursor: pointer;
     margin-bottom: 3px;
+  }
+
+  .mobile-screenshot-overlay {
+    position: absolute;
+    bottom: 20px;
+    right: 45px;
+    display: flex;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 4px;
+    border-radius: 8px;
+    z-index: 100;
+  }
+
+  /* Mobile Icons */
+  .overlay-icon-mobile {
+    width: 20px;
+    height: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  .overlay-icon-mobile:hover {
+    color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
   }
 }
 

@@ -1,11 +1,10 @@
 import "./Work.css";
 import WorkContainer from "./WorkContainer";
 
-function Work({ openModal }) {
-  // Fix typo in prop name
+function Work({ openModal, openMediaModal }) {
   return (
     <div className="work-parent">
-      <WorkContainer openModal={openModal} /> {/* Pass openModal */}
+      <WorkContainer openModal={openModal} openMediaModal={openMediaModal} />
     </div>
   );
 }

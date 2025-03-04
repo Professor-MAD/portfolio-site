@@ -2,8 +2,7 @@ import "./WorkContainer.css";
 import workContent from "./WorkContent";
 import WorkItem from "./WorkItem";
 
-function WorkContainer({ openModal }) {
-  // Receive openModal from App.js
+function WorkContainer({ openModal, openMediaModal }) {
   return (
     <div className="container-wrap">
       {workContent.map((project, index) => (
@@ -20,7 +19,8 @@ function WorkContainer({ openModal }) {
           fontSize={project.fontSize}
           desktopFontSize={project.desktopFontSize}
           useVideo={project.useVideo}
-          openModal={openModal} // Pass down openModal function
+          openModal={openModal}
+          openMediaModal={openMediaModal} // Pass down the function
         />
       ))}
     </div>

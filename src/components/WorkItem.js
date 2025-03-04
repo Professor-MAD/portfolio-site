@@ -1,4 +1,5 @@
-import { ExternalLink, Expand } from "lucide-react"; // Import icons
+// WorkItem.js
+import { ExternalLink, Expand } from "lucide-react";
 import useIsMobile from "./hooks/useIsMobile";
 import "./WorkContainer.css";
 
@@ -15,12 +16,12 @@ function WorkItem({
   desktopFontSize,
   useVideo,
   openModal,
+  openMediaModal,
 }) {
   const isMobile = useIsMobile();
 
   return (
     <div className="work-container">
-      {/* Only show this in non-mobile view */}
       {!isMobile && (
         <div className="container-left">
           <img className="mana-mind" src={logo} alt={title} />
@@ -28,7 +29,6 @@ function WorkItem({
             <video
               className="mana-mind-screenshot"
               src={screenshot}
-              alt={`${title} Screenshot`}
               autoPlay
               loop
               muted
@@ -43,13 +43,10 @@ function WorkItem({
 
           {/* Overlay Icons */}
           <div className="screenshot-overlay">
-            {/* Click-Out Icon */}
             <a href={link} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="overlay-icon" />
             </a>
-
-            {/* Expand Image Icon */}
-            <span onClick={() => openModal(screenshot)}>
+            <span onClick={() => openMediaModal(screenshot, useVideo)}>
               <Expand className="overlay-icon" />
             </span>
           </div>
@@ -60,7 +57,7 @@ function WorkItem({
         <div
           className="container-right-top"
           style={{
-            fontFamily: fontFamily,
+            fontFamily,
             fontSize: `clamp(${fontSize}, calc(${fontSize} + 2vw), ${desktopFontSize})`,
           }}
         >
@@ -73,14 +70,12 @@ function WorkItem({
           </a>
         </div>
 
-        {/* Mobile-specific JSX */}
         {isMobile && (
           <div className="mobile-screenshot-wrapper">
             {useVideo ? (
               <video
                 className="mana-mind-screenshot-mobile"
                 src={screenshot}
-                alt={`${title} Screenshot`}
                 autoPlay
                 loop
                 muted
@@ -93,15 +88,11 @@ function WorkItem({
               />
             )}
             <img className="mana-mind-logo-mobile" src={logo} alt={title} />
-
             <div className="mobile-screenshot-overlay">
-              {/* Click-Out Icon */}
               <a href={link} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="overlay-icon-mobile" />
               </a>
-
-              {/* Expand Image Icon */}
-              <span onClick={() => openModal(screenshot)}>
+              <span onClick={() => openMediaModal(screenshot, useVideo)}>
                 <Expand className="overlay-icon-mobile" />
               </span>
             </div>
@@ -119,24 +110,6 @@ function WorkItem({
                   key={index}
                 />
               ))}
-              {isMobile && (
-                <div className="mobile-icons-wrapper">
-                  <a href={github} target="_blank" rel="noopener noreferrer">
-                    <img
-                      className="github-mobile"
-                      src="/images/github.png"
-                      alt="GitHub"
-                    />
-                  </a>
-                  <a href={link} target="_blank" rel="noopener noreferrer">
-                    <img
-                      className="link-mobile"
-                      src="/images/link.png"
-                      alt="Link"
-                    />
-                  </a>
-                </div>
-              )}
             </div>
             <div className="text" onClick={() => openModal(description)}>
               {description}

@@ -13,15 +13,17 @@
 
 .modal-content {
   background: #222;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
   position: relative;
-  max-width: 90%;
+  max-width: 75%;
   max-height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  margin: 35px;
 }
 
 .modal-media {

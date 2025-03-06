@@ -7,7 +7,7 @@ const workContent = [
     link: "https://github.com/Professor-MAD/ManaMind-MTG-Stockfish",
     icons: ["/images/c.png", "/images/clang.png"],
     description:
-      "This is a custom-built MTG engine with a unique class-less, functional approach to card creation, featuring a gameloop that is operated in the terminal. The card_creation engine and the game_loop engine work together to create a one-of-a-kind card playing experience, focused on game functions and data. A work in progress, the goal will be to someday emulate games at high speeds using all of Magic’s cards, making it the “Stockfish” of Magic the Gathering. It is an open-source project.",
+      "This is a custom-built MTG engine with functional approach to card creation, featuring a gameloop that is operated in the terminal. The card_creation engine and the game_loop engine work together to create a one-of-a-kind card playing experience, focused on game functions and data. A work in progress, the goal will be to someday emulate games at high speeds using all of Magic’s cards, making it the “Stockfish” of Magic the Gathering. It is an open-source project.",
     fontFamily: "Planewalker",
     fontSize: ".9rem",
     desktopFontSize: "3rem",

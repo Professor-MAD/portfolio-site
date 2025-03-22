@@ -75,27 +75,27 @@ const workContent = [
     useVideo: true,
   },
 
-  {
-    title: "D-Comply: Compliance Training Dashboard",
-    logo: "/images/DComply-logo.png",
-    screenshot: "/images/dcomply-shot.png",
-    github: "https://github.com/Professor-MAD",
-    link: "https://github.com/Professor-MAD",
-    icons: [
-      "/images/react.png",
-      "/images/css.png",
-      "/images/js.png",
-      "/images/node.png",
-      "/images/ex.png",
-      "/images/mongo.png",
-    ],
-    description:
-      "D-comply is a clone application of Binghamton University’s B-comply app. It is a compliance training platform in which users go through training sequences featuring point and click tests, videos, and surveys. Their progress is saved in a database and is updated for their needs. It can be controlled through an administrator’s dashboard. It is a WIP, and is primarily used as a mechanism to experiment with back-end solutions. The website is not hosted but its code can be viewed on Github.",
-    fontFamily: "Poor Rich",
-    fontSize: ".7rem",
-    desktopFontSize: "3.2rem",
-    useVideo: false,
-  },
+  // {
+  //   title: "D-Comply: Compliance Training Dashboard",
+  //   logo: "/images/DComply-logo.png",
+  //   screenshot: "/images/dcomply-shot.png",
+  //   github: "https://github.com/Professor-MAD",
+  //   link: "https://github.com/Professor-MAD",
+  //   icons: [
+  //     "/images/react.png",
+  //     "/images/css.png",
+  //     "/images/js.png",
+  //     "/images/node.png",
+  //     "/images/ex.png",
+  //     "/images/mongo.png",
+  //   ],
+  //   description:
+  //     "D-comply is a clone application of Binghamton University’s B-comply app. It is a compliance training platform in which users go through training sequences featuring point and click tests, videos, and surveys. Their progress is saved in a database and is updated for their needs. It can be controlled through an administrator’s dashboard. It is a WIP, and is primarily used as a mechanism to experiment with back-end solutions. The website is not hosted but its code can be viewed on Github.",
+  //   fontFamily: "Poor Rich",
+  //   fontSize: ".7rem",
+  //   desktopFontSize: "3.2rem",
+  //   useVideo: false,
+  // },
 
   {
     title: "osr tolkien map: online map store",

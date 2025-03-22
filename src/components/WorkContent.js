@@ -11,7 +11,7 @@ const workContent = [
     fontFamily: "Planewalker",
     fontSize: ".9rem",
     desktopFontSize: "3rem",
-    useVideo: true, // Add this property
+    useVideo: true,
   },
 
   {
@@ -31,7 +31,7 @@ const workContent = [
     fontFamily: "Bellfoods",
     fontSize: ".7rem",
     desktopFontSize: "3rem",
-    useVideo: false, // Add this property
+    useVideo: false,
   },
 
   {
@@ -51,7 +51,7 @@ const workContent = [
     fontFamily: "Street Devil",
     fontSize: ".3rem",
     desktopFontSize: "2rem",
-    useVideo: true, // Add this property
+    useVideo: true,
   },
 
   {
@@ -72,7 +72,7 @@ const workContent = [
     fontFamily: "Yikes",
     fontSize: ".6rem",
     desktopFontSize: "3rem",
-    useVideo: true, // Add this property
+    useVideo: true,
   },
 
   {
@@ -94,7 +94,7 @@ const workContent = [
     fontFamily: "Poor Rich",
     fontSize: ".7rem",
     desktopFontSize: "3.2rem",
-    useVideo: false, // Add this property
+    useVideo: false,
   },
 
   {
@@ -115,7 +115,7 @@ const workContent = [
     fontFamily: "Ringbearer",
     fontSize: ".7rem",
     desktopFontSize: "3.2rem",
-    useVideo: false, // Add this property
+    useVideo: false,
   },
 
   {
@@ -135,7 +135,7 @@ const workContent = [
     fontFamily: "Cyberpunk",
     fontSize: ".3rem",
     desktopFontSize: "2.2rem",
-    useVideo: false, // Add this property
+    useVideo: false,
   },
 ];
 

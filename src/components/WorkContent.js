@@ -1,5 +1,45 @@
 const workContent = [
   {
+    title: "Totes! The GOAT! Peer-to-peer Renting Platform",
+    logo: "/images/totes-favicon.png",
+    screenshot: "/images/totes-screenshot.jpg",
+    github: "https://github.com/Professor-MAD/totes-pitch-mvp",
+    link: "https://github.com/Professor-MAD/totes-pitch-mvp",
+    icons: [
+      "/images/react.png",
+      "/images/tailwind.png",
+      "/images/js.png",
+      "/images/firebase.png",
+      "/images/stripe.png",
+    ],
+    description:
+      "Totes is a peer-to-peer rental platform that makes it easy to rent everyday items from people near you. Whether you need tools, gear, electronics, or party supplies, Totes helps you find what you need without the cost of buying new. Users can list items, set availability, and manage bookings all in one place. It’s convenient, eco-friendly, and community-driven—perfect for saving money, reducing waste, and making the most out of the stuff we already own.",
+    fontFamily: "Nueva",
+    fontSize: ".9rem",
+    desktopFontSize: "3rem",
+    useVideo: false,
+  },
+  {
+    title: "VIBE.it Club Event Ticket Platform",
+    logo: "/images/vibe-logo.png",
+    screenshot: "/images/vibe-screenshot.jpg",
+    github: "https://github.com/V1BEit/prod_mono_frontend",
+    link: "https://github.com/V1BEit/prod_mono_frontend",
+    icons: [
+      "/images/react.png",
+      "/images/tailwind.png",
+      "/images/js.png",
+      "/images/fast-api.png",
+      "/images/aws.png",
+    ],
+    description:
+      "VIBE is a dynamic event platform designed to empower nightlife venues and event organizers. With a sleek, intuitive interface, VIBE makes it easy to create, manage, and promote events—from underground parties to world-class club nights. Users can explore trending events, discover top venues, and purchase tickets seamlessly. For businesses, VIBE offers robust tools for analytics, CRM, and custom branding. Whether you're hosting or attending, VIBE transforms the way people connect through nightlife and entertainment.",
+    fontFamily: "Perpetua",
+    fontSize: ".9rem",
+    desktopFontSize: "3rem",
+    useVideo: false,
+  },
+  {
     title: "ManaMind: The MTG Stockfish",
     logo: "/images/mana-mind.png",
     screenshot: "/images/manamind-vid.webm",

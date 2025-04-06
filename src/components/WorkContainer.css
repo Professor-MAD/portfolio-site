@@ -108,6 +108,16 @@
   src: url("./fonts/Bellfoods.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Nueva";
+  src: url("./fonts/NuevaStd-BoldCond.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Perpetua";
+  src: url("./fonts/PERB____.TTF") format("truetype");
+}
+
 /* Title Text Here */
 .container-right-top {
   display: flex;

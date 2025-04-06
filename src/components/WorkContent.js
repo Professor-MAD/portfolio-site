@@ -1,8 +1,8 @@
 const workContent = [
   {
-    title: "Totes! The GOAT! Peer-to-peer Renting Platform",
+    title: "Totes! The GOAT! Rental Platform",
     logo: "/images/totes-favicon.png",
-    screenshot: "/images/totes-screenshot.jpg",
+    screenshot: "/images/totes-screenshot-2.jpg",
     github: "https://github.com/Professor-MAD/totes-pitch-mvp",
     link: "https://github.com/Professor-MAD/totes-pitch-mvp",
     icons: [
@@ -22,7 +22,7 @@ const workContent = [
   {
     title: "VIBE.it Club Event Ticket Platform",
     logo: "/images/vibe-logo.png",
-    screenshot: "/images/vibe-screenshot.jpg",
+    screenshot: "/images/vibe-screenshot-2.jpg",
     github: "https://github.com/V1BEit/prod_mono_frontend",
     link: "https://github.com/V1BEit/prod_mono_frontend",
     icons: [

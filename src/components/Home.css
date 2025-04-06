@@ -1,172 +1,166 @@
 .home-container {
-    display: flex;
-    flex-direction: row;
-    color: white;
-    background-color: none;
-    width: 100%;
-    height: 30%;
-    border-bottom: 2px solid white;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: none;
+  width: 100%;
+  height: 30%;
+  border-bottom: 2px solid white;
 }
 
 .home-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 50%;
-    height: 100%;
-    margin-left: 100px;
-    margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
+  height: 100%;
+  margin-left: 100px;
+  margin-top: 50px;
 }
 
 .home-right {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 50%;
-    height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
 }
 
 .Im {
-    color: gray;
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .name {
-    color: white;
-    font-size: 2.5rem;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 10px;
+  color: white;
+  font-size: 2.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
 }
 
 .description {
-    color: lightgray;
-    font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 40px;
+  color: lightgray;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 40px;
 }
 
 .projects-button {
+  background-color: turquoise;
+  color: black;
+  border-radius: 40px;
+  width: 150px;
+  height: 45px;
+  text-align: center;
+  padding: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.projects-button:hover {
+  border: 2px solid turquoise;
+  box-shadow: 0 0 10px turquoise, 0 0 20px turquoise;
+}
+
+.avatar {
+  margin-top: 15px;
+  cursor: pointer;
+  height: 400px; /* Set an explicit height */
+  width: 400px; /* Set an explicit width */
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    width: 100%;
+    height: 20%;
+  }
+
+  .home-left {
+    width: 50%;
+    height: 100%;
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    width: 100%;
+    height: 20%;
+  }
+
+  .home-left {
+    width: 55%;
+    height: 100%;
+    margin-left: 20px;
+    margin-top: 10px;
+    /* background-color: red; */
+  }
+
+  .home-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 35%;
+    height: 100%;
+    /* background-color: blue; */
+    margin-bottom: 10px;
+  }
+
+  .avatar {
+    margin-top: 15px;
+    cursor: pointer;
+    height: 125px; /* Set an explicit height */
+    width: 125px; /* Set an explicit width */
+  }
+
+  .Im {
+    color: gray;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .name {
+    color: white;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+  }
+
+  .description {
+    color: lightgray;
+    font-size: 0.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+  }
+
+  .projects-button {
     background-color: turquoise;
     color: black;
     border-radius: 40px;
-    width: 150px;
-    height: 45px;
+    width: 75px;
+    height: 23px;
     text-align: center;
-    padding: 11px;
+    padding: 4px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     border: 2px solid transparent;
     box-sizing: border-box;
-    transition: all 0.3s ease-in-out; 
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
-}
+    font-size: 0.5rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
 
-.projects-button:hover {
+  .projects-button:hover {
     border: 2px solid turquoise;
     box-shadow: 0 0 10px turquoise, 0 0 20px turquoise;
+    margin-bottom: 10px;
+  }
 }
-
-.avatar {
-    margin-top: 15px;
-    cursor: pointer;
-    height: 400px; /* Set an explicit height */
-    width: 400px; /* Set an explicit width */
-}
-
-@media (max-width: 768px) {
-    .home-container {
-        width: 100%;
-        height: 20%;
-    }
-
-    .home-left {
-        width: 50%;
-        height: 100%;
-        margin-left: 50px;
-        margin-top: 20px;
-        
-    }
-
-
-}
-
-@media (max-width: 480px) {
-    .home-container {
-        width: 100%;
-        height: 20%;
-      
-    }
-
-    .home-left {
-        width: 55%;
-        height: 100%;
-        margin-left: 20px;
-        margin-top: 10px;
-       /* background-color: red; */
-    }
-
-    .home-right {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 35%;
-        height: 100%;
-        /* background-color: blue; */
-        margin-bottom: 10px;
-      
-    }
-
-    .avatar {
-        margin-top: 15px;
-        cursor: pointer;
-        height: 125px; /* Set an explicit height */
-        width: 125px; /* Set an explicit width */
-    }
-
-    .Im {
-        color: gray;
-        font-size: 1rem;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .name {
-        color: white;
-        font-size: 1.3rem;
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 5px;
-    }
-    
-    .description {
-        color: lightgray;
-        font-size: .5rem;
-        font-family: Arial, Helvetica, sans-serif;
-        margin-bottom: 10px;
-    }
-    
-    .projects-button {
-        background-color: turquoise;
-        color: black;
-        border-radius: 40px;
-        width: 75px;
-        height: 23px;
-        text-align: center;
-        padding: 4px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        border: 2px solid transparent;
-        box-sizing: border-box;
-        transition: all 0.3s ease-in-out; 
-        cursor: pointer;
-        font-size: .5rem;
-        margin-bottom: 10px;
-        margin-top: 10px;
-    }
-    
-    .projects-button:hover {
-        border: 2px solid turquoise;
-        box-shadow: 0 0 10px turquoise, 0 0 20px turquoise;
-        margin-bottom: 10px;
-    }
-}
-

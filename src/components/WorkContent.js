@@ -4,7 +4,7 @@ const workContent = [
     logo: "/images/totes-favicon.png",
     screenshot: "/images/totes-screenshot-2.jpg",
     github: "https://github.com/Professor-MAD/totes-pitch-mvp",
-    link: "https://github.com/Professor-MAD/totes-pitch-mvp",
+    link: "https://totes-mvp.web.app/",
     icons: [
       "/images/react.png",
       "/images/tailwind.png",
@@ -24,7 +24,7 @@ const workContent = [
     logo: "/images/vibe-logo.png",
     screenshot: "/images/vibe-screenshot-2.jpg",
     github: "https://github.com/V1BEit/prod_mono_frontend",
-    link: "https://github.com/V1BEit/prod_mono_frontend",
+    link: "https://vibeclub.it/",
     icons: [
       "/images/react.png",
       "/images/tailwind.png",

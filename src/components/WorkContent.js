@@ -8,8 +8,10 @@ const workContent = [
     icons: [
       "/images/react.png",
       "/images/tailwind.png",
-      "/images/js.png",
-      "/images/firebase.png",
+      "/images/Typescript_logo_2020.svg.png",
+      "/images/AdonisJS.png",
+      "images/Postgresql_elephant.svg.png",
+      "/images/railway.png",
       "/images/stripe.png",
     ],
     description:
@@ -28,8 +30,9 @@ const workContent = [
     icons: [
       "/images/react.png",
       "/images/tailwind.png",
-      "/images/js.png",
+      "/images/Typescript_logo_2020.svg.png",
       "/images/fast-api.png",
+      "images/Postgresql_elephant.svg.png",
       "/images/aws.png",
     ],
     description:
@@ -60,12 +63,7 @@ const workContent = [
     screenshot: "/images/pq-sh.png",
     github: "https://github.com/Professor-MAD/pantry-quest-frontD",
     link: "https://github.com/Professor-MAD/pantry-quest-front",
-    icons: [
-      "/images/react.png",
-      "/images/expo.png",
-      "/images/next.png",
-      "/images/firebase.png",
-    ],
+    icons: ["/images/react.png", "/images/expo.png", "/images/next.png", "/images/firebase.png"],
     description:
       "Don’t you wish your shopping list would make itself? Pantry Quest makes your shopping lists for you by keeping track of what you have and generating a weekly grocery list from your inventory and recipes list. Add items to your inventory and fridge using the cutest UI you’ve ever seen. Type in the name, or add it by barcode, or use the AI feature to scan your entire pantry. Add recipes and schedule your shopping list generation. Users can share a household with another user and thereafter share their pantry and recipes. Great for working families and couples!",
     fontFamily: "Bellfoods",
@@ -80,12 +78,7 @@ const workContent = [
     screenshot: "/images/satan-vid.webm",
     github: "https://github.com/Professor-MAD",
     link: "https://satanicagenda.com/",
-    icons: [
-      "/images/react.png",
-      "/images/css.png",
-      "/images/js.png",
-      "/images/firebase.png",
-    ],
+    icons: ["/images/react.png", "/images/css.png", "/images/js.png", "/images/firebase.png"],
     description:
       "Satanic Agenda is a calendar app with a robust “todo” system, featuring an “upcoming” and “graveyard” mechanic. There are “scrolls” for larger texts and even a “Satan button,” which can be used to call Satan so he can yell at you to...err...motivate you. The app also comes with Hell Weather, Hell News, Hell Sports, and Hell Stocks, so you can be up to date on what’s happening in Hell. Users can use for free and their session will be saved, but to save forever, they must make an account.",
     fontFamily: "Street Devil",
@@ -100,13 +93,7 @@ const workContent = [
     screenshot: "/images/mad-demo.webm",
     github: "https://github.com/Professor-MAD",
     link: "https://professormad.com/",
-    icons: [
-      "/images/html.png",
-      "/images/css.png",
-      "/images/js.png",
-      "/images/firebase.png",
-      "/images/stripe.png",
-    ],
+    icons: ["/images/html.png", "/images/css.png", "/images/js.png", "/images/firebase.png", "/images/stripe.png"],
     description:
       "Professormad.com is the homepage for the comedic adult-comic book “The Beautiful Shamaryayamayamays of Shnerfadalailisexinr.” The website comes with an e-commerce interface, browser game page, and the fastest-growing public fart-noise MP3 library—all user-generated. An artistic project of the infamous PROFESSOR MAD, the IP is accompanied by a video series and merch line. Buy your copy today and immediately regret your decision! Or maybe just stop by to play DINO NUKE COCKROACH.",
     fontFamily: "Yikes",
@@ -143,13 +130,7 @@ const workContent = [
     screenshot: "/images/osr.png",
     github: "https://github.com/Professor-MAD",
     link: "https://osr-tolkien-map.web.app/",
-    icons: [
-      "/images/html.png",
-      "/images/css.png",
-      "/images/js.png",
-      "/images/firebase.png",
-      "/images/stripe.png",
-    ],
+    icons: ["/images/html.png", "/images/css.png", "/images/js.png", "/images/firebase.png", "/images/stripe.png"],
     description:
       "The OSR Tolkien Map is an art project from the infamous PROFESSOR MAD, showcasing a map of Onteora Scout Reservation, Theodore Roosevelt Council, Scouts BSA, in the spirit of Tolkien, writer of Lord of the Rings and Creator of Middle Earth. The website is a simple e-commerce platform, that has attracted considerable attention from members of our council, both Scouts and Alumni alike. The transaction backend uses Stripe to process payments. The desktop version of the site features a hover zoom feature, made famous by Amazon listings.",
     fontFamily: "Ringbearer",
@@ -164,12 +145,7 @@ const workContent = [
     screenshot: "/images/dreamcast-shot.png",
     github: "https://github.com/Professor-MAD",
     link: "https://dreamcastcentrifuge.web.app/",
-    icons: [
-      "/images/html.png",
-      "/images/css.png",
-      "/images/js.png",
-      "/images/firebase.png",
-    ],
+    icons: ["/images/html.png", "/images/css.png", "/images/js.png", "/images/firebase.png"],
     description:
       "Have you ever settled down for some Sega Dreamcast when all of a sudden you are stricken with indecision as to which game you should play? Too many decisions! With Dreamcast Centrifuge, you can select your custom list of games and then RANDOMIZE! The app will make the tough decisions for you. Don’t feel like playing Sonic Adventure 2? No problem! Try some Sega Marine Fishing? What’s that? Don’t like fish? How about some Chu Chu Rocket. The world is yours.",
     fontFamily: "Cyberpunk",

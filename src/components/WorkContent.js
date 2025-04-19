@@ -13,6 +13,7 @@ const workContent = [
       "images/Postgresql_elephant.svg.png",
       "/images/railway.png",
       "/images/stripe.png",
+      "/images/Amazon-S3-Logo.svg.png",
     ],
     description:
       "Totes is a peer-to-peer rental platform that makes it easy to rent everyday items from people near you. Whether you need tools, gear, electronics, or party supplies, Totes helps you find what you need without the cost of buying new. Users can list items, set availability, and manage bookings all in one place. It’s convenient, eco-friendly, and community-driven—perfect for saving money, reducing waste, and making the most out of the stuff we already own.",

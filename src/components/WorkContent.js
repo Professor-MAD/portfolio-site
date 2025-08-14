@@ -89,7 +89,7 @@ const workContent = [
   },
 
   {
-    title: 'Satanic Agenda: Full-Service Home Page',
+    title: 'Satanic Agenda',
     logo: '/images/satan-todo-favicon.png',
     screenshot: '/images/satan-vid.webm',
     github: 'https://github.com/Professor-MAD',
@@ -108,7 +108,7 @@ const workContent = [
   },
 
   {
-    title: 'PROFESSOR MAD: ONLINE COMIC BOOK STORE',
+    title: 'PROFESSOR MAD: COMIC BOOK STORE',
     logo: '/images/favicon-professor-mad.png',
     screenshot: '/images/mad-demo.webm',
     github: 'https://github.com/Professor-MAD',
@@ -149,7 +149,7 @@ const workContent = [
   // },
 
   {
-    title: 'osr tolkien map: online map store',
+    title: 'osr tolkien map: map store',
     logo: '/images/osr-favicon.png',
     screenshot: '/images/osr.png',
     github: 'https://github.com/Professor-MAD',

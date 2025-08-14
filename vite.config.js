@@ -16,7 +16,7 @@ export default defineConfig({
     open: true,
   },
   build: {
-    outDir: 'dist',
+    outDir: 'build', // Change from 'dist' to 'build'
     sourcemap: true,
   },
   esbuild: {

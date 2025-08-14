@@ -12,8 +12,6 @@ function WorkItem({
   icons,
   description,
   fontFamily,
-  fontSize,
-  desktopFontSize,
   useVideo,
   openModal,
   openMediaModal,
@@ -24,10 +22,10 @@ function WorkItem({
     <div className="work-container">
       {!isMobile && (
         <div className="container-left">
-          <img className="mana-mind" src={logo} alt={title} />
+          <img className="project-logo" src={logo} alt={title} />
           {useVideo ? (
             <video
-              className="mana-mind-screenshot"
+              className="project-screenshot"
               src={screenshot}
               autoPlay
               loop
@@ -35,7 +33,7 @@ function WorkItem({
             />
           ) : (
             <img
-              className="mana-mind-screenshot"
+              className="project-screenshot"
               src={screenshot}
               alt={`${title} Screenshot`}
             />
@@ -55,10 +53,9 @@ function WorkItem({
 
       <div className="container-right">
         <div
-          className="container-right-top"
+          className="project-title"
           style={{
-            fontFamily,
-            fontSize: `clamp(${fontSize}, calc(${fontSize} + 2vw), ${desktopFontSize})`,
+            fontFamily: `var(--font-${fontFamily.toLowerCase().replace(/\s+/g, '')})`,
           }}
         >
           {title}

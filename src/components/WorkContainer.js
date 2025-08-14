@@ -1,6 +1,6 @@
-import "./WorkContainer.css";
-import workContent from "./WorkContent";
-import WorkItem from "./WorkItem";
+import './WorkContainer.css';
+import workContent from './WorkContent';
+import WorkItem from './WorkItem';
 
 function WorkContainer({ openModal, openMediaModal }) {
   return (

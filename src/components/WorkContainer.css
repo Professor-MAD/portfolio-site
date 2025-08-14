@@ -1,71 +1,209 @@
-.container-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* CSS Custom Properties for consistent sizing */
+:root {
+  --card-border-radius: 25px;
+  --card-padding: 20px;
+  --card-margin: 20px;
+  --title-font-size-mobile: 1.2rem;
+  --title-font-size-desktop: 2.5rem;
+  --description-font-size: 0.9rem;
+  --icon-size: 35px;
+  --logo-size: 80px;
+  --screenshot-height: 200px;
 }
 
+/* Font family variables */
+:root {
+  --font-planewalker: 'Planewalker', sans-serif;
+  --font-streetdevil: 'Street Devil', sans-serif;
+  --font-yikes: 'Yikes', sans-serif;
+  --font-poorrich: 'Poor Rich', sans-serif;
+  --font-ringbearer: 'Ringbearer', sans-serif;
+  --font-cyberpunk: 'Cyberpunk', sans-serif;
+  --font-bellfoods: 'Bellfoods', sans-serif;
+  --font-nueva: 'Nueva', sans-serif;
+  --font-perpetua: 'Perpetua', sans-serif;
+}
+
+/* Base container styles */
+.container-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  width: 90%;
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Individual card styles */
 .work-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 70%;
+  width: 100%;
   height: auto;
-  margin-top: 20px;
-  border-radius: 40px;
+  margin: 0;
+  border-radius: var(--card-border-radius);
   border: 2px solid white;
-  padding: 10px;
+  padding: var(--card-padding);
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .work-container:hover {
   border: 2px solid white;
   box-shadow:
-    0 0 10px white,
-    0 0 20px white;
-  /* background-image: url("gray-moving.gif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
+    0 0 15px white,
+    0 0 30px white;
+  transform: translateY(-5px);
+  background: rgba(0, 0, 0, 0.2);
 }
 
+/* Project logo and screenshot container */
 .container-left {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 30%;
-  height: 100%;
-  position: relative; /* Enables positioning of child elements */
-  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 15px;
 }
 
-.container-right {
+.project-logo {
+  width: var(--logo-size);
+  height: var(--logo-size);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: 10;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.project-screenshot {
+  width: 100%;
+  height: var(--screenshot-height);
+  object-fit: cover;
+  box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
+  position: relative;
+  z-index: 1;
+  border-radius: 15px;
+}
+
+/* Project title section */
+.project-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  position: relative;
+  margin: 15px 0;
+  padding: 0;
+  min-height: 60px;
+  font-size: var(--title-font-size-desktop);
+  font-weight: bold;
+  color: white;
+}
+
+/* GitHub and link icons */
+.github,
+.link {
+  display: none; /* Hidden on desktop */
+}
+
+/* Project content section */
+.container-right-bottom {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 70%;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
-/* Overlay Container for Icons */
+
+.work-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+/* Technology icons row */
+.icon-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.icon {
+  height: var(--icon-size);
+  width: var(--icon-size);
+  transition: transform 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Project description */
+.text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  background-color: rgba(128, 128, 128, 0.8);
+  color: white;
+  border-radius: 20px;
+  padding: 15px;
+  text-shadow: 1px 1px 3px rgba(22, 23, 24, 0.5);
+  font-size: var(--description-font-size);
+  box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
+  line-height: 1.4;
+  max-height: 120px;
+  overflow-y: auto;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.text:hover {
+  background-color: rgba(128, 128, 128, 1);
+}
+
+/* Screenshot overlay */
 .screenshot-overlay {
   position: absolute;
-  bottom: 10px;
-  right: 85px;
+  bottom: 15px;
+  right: 15px;
   display: flex;
-  gap: 10px; /* Space between icons */
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
-  padding: 5px;
-  border-radius: 10px;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 6px;
+  border-radius: 8px;
   z-index: 100;
 }
 
-/* Style Icons */
 .overlay-icon {
-  width: 24px;
-  height: 24px;
-  color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
+  width: 20px;
+  height: 20px;
+  color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
   transition:
     color 0.2s ease,
@@ -77,6 +215,100 @@
   transform: scale(1.1);
 }
 
+/* Mobile styles */
+@media (max-width: 768px) {
+  .container-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    padding: 10px;
+  }
+
+  .work-container {
+    width: 95%;
+    margin: 10px;
+    border-radius: 40px;
+    padding: 15px;
+  }
+
+  .container-left {
+    display: none;
+  }
+
+  .project-title {
+    font-size: var(--title-font-size-mobile);
+    margin-bottom: 20px;
+  }
+
+  .text {
+    font-size: 0.75rem;
+    padding: 8px;
+    border-radius: 15px;
+  }
+
+  .icon {
+    height: 25px;
+    width: 25px;
+  }
+
+  /* Mobile screenshot wrapper */
+  .mobile-screenshot-wrapper {
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mana-mind-screenshot-mobile {
+    width: 80%;
+    height: auto;
+    box-shadow: 2px 2px 8px rgba(64, 224, 208, 0.5);
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .mana-mind-logo-mobile {
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    z-index: 5;
+  }
+
+  .mobile-screenshot-overlay {
+    position: absolute;
+    bottom: 20px;
+    right: 45px;
+    display: flex;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 4px;
+    border-radius: 8px;
+    z-index: 100;
+  }
+
+  .overlay-icon-mobile {
+    width: 20px;
+    height: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .overlay-icon-mobile:hover {
+    color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+  }
+}
+
+/* Keep your existing font-face declarations */
 @font-face {
   font-family: 'Planewalker';
   src: url('./fonts/Planewalker.otf') format('opentype');

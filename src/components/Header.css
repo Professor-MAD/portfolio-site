@@ -1,100 +1,134 @@
 .header-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 10%;
-    padding: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 10%;
+  padding: 20px;
+  /* Add background glow effect */
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  position: relative;
+  overflow: hidden;
+  /* Add white separator line below header */
+  border-bottom: 2px solid white;
+}
+
+/* Add background glow effect */
+.header-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(64, 224, 208, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(64, 224, 208, 0.1) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure content is above the background */
+.header-container > * {
+  position: relative;
+  z-index: 1;
 }
 
 .header-left {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 20px;
 }
 
 .header-right {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end; /* Align buttons to the right by default */
-    align-items: center;
-    width: 45%;
-    height: 100%;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
-    margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; /* Align buttons to the right by default */
+  align-items: center;
+  width: 45%;
+  height: 100%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  margin-right: 20px;
 }
 
 .home-button,
 .work-button,
 .about-button,
 .contact-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-    height: 100%;
-    cursor: pointer;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  cursor: pointer;
+  text-align: center;
 }
 
 .home-button:hover,
 .work-button:hover,
 .about-button:hover,
 .contact-button:hover {
-    color: lightgray;
+  color: lightgray;
 }
 
 /* Styles for screen width 768px or smaller */
 @media (max-width: 768px) {
-    .header-right {
-        justify-content: center; /* Center the buttons */
-        flex-wrap: wrap; /* Allow buttons to wrap if needed */
-        width: 100%;
-        margin-right: 0%;
-    }
+  .header-right {
+    justify-content: center; /* Center the buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap if needed */
+    width: 100%;
+    margin-right: 0%;
+  }
 
-    .header-left {
-        width: 0%;
-        display: none;
-    }
+  .header-left {
+    width: 0%;
+    display: none;
+  }
 
-    .home-button,
-    .work-button,
-    .about-button,
-    .contact-button {
-        font-size: 1rem; /* Adjust button size for smaller screens */
-        width: 20%; /* Shrink button width */
-        margin: 5px; /* Add spacing between buttons */
-    }
+  .home-button,
+  .work-button,
+  .about-button,
+  .contact-button {
+    font-size: 1rem; /* Adjust button size for smaller screens */
+    width: 20%; /* Shrink button width */
+    margin: 5px; /* Add spacing between buttons */
+  }
 
-    .header-container {
-        padding: 10px;
-    }
+  .header-container {
+    padding: 10px;
+  }
 }
 
 /* Styles for screen width 480px or smaller */
 @media (max-width: 480px) {
-    .header-right {
-        justify-content: center; /* Ensure buttons remain centered */
-        flex-wrap: wrap; /* Buttons wrap to fit smaller screens */
-        width: 100%;
-    }
+  .header-right {
+    justify-content: center; /* Ensure buttons remain centered */
+    flex-wrap: wrap; /* Buttons wrap to fit smaller screens */
+    width: 100%;
+  }
 
-    .home-button,
-    .work-button,
-    .about-button,
-    .contact-button {
-        font-size: 0.8rem; /* Make the text smaller */
-        width: 20%; /* Adjust button width for very small screens */
-        margin: 5px; /* Add spacing between buttons */
-
-    }
+  .home-button,
+  .work-button,
+  .about-button,
+  .contact-button {
+    font-size: 0.8rem; /* Make the text smaller */
+    width: 20%; /* Adjust button width for very small screens */
+    margin: 5px; /* Add spacing between buttons */
+  }
 }

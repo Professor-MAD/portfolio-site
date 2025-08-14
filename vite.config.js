@@ -16,7 +16,7 @@ export default defineConfig({
     open: true,
   },
   build: {
-    outDir: 'build', // Change from 'dist' to 'build'
+    outDir: 'dist', // Change back to 'dist' to match vercel.json
     sourcemap: true,
   },
   esbuild: {

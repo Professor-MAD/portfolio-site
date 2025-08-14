@@ -23,6 +23,7 @@
   --font-bellfoods: 'Bellfoods', sans-serif;
   --font-nueva: 'Nueva', sans-serif;
   --font-perpetua: 'Perpetua', sans-serif;
+  --font-naturebreath: 'Nature Breath', sans-serif;
 }
 
 /* Base container styles */
@@ -396,6 +397,12 @@
   font-family: 'Perpetua';
   src: url('./fonts/PERB____.TTF') format('truetype');
 }
+
+@font-face {
+  font-family: 'Nature Breath';
+  src: url('./fonts/Nature Breath.ttf') format('truetype');
+}
+
 /* HEY */
 
 /* Title Text Here */

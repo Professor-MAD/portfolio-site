@@ -1,7 +1,7 @@
 // WorkItem.js
-import { ExternalLink, Expand } from "lucide-react";
-import useIsMobile from "./hooks/useIsMobile";
-import "./WorkContainer.css";
+import { ExternalLink, Expand } from 'lucide-react';
+import useIsMobile from './hooks/useIsMobile';
+import './WorkContainer.css';
 
 function WorkItem({
   title,

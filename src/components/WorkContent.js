@@ -100,6 +100,8 @@ const workContent = [
     link: 'https://redtrailwanderers.vercel.app/',
     icons: [
       '/images/next.png',
+      '/images/tailwind.png',
+      '/images/Typescript_logo_2020.svg.png',
       '/images/prisma.png',
       '/images/Postgresql_elephant.svg.png',
     ],

@@ -1,5 +1,5 @@
-import "./Work.css";
-import WorkContainer from "./WorkContainer";
+import './Work.css';
+import WorkContainer from './WorkContainer';
 
 function Work({ openModal, openMediaModal }) {
   return (

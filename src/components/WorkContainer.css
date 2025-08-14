@@ -5,6 +5,7 @@
   --card-margin: 20px;
   --title-font-size-mobile: 1.2rem;
   --title-font-size-desktop: 2.5rem;
+  --title-font-size-small: 1.8rem; /* Add this line */
   --description-font-size: 0.9rem;
   --icon-size: 35px;
   --logo-size: 80px;
@@ -1066,4 +1067,8 @@
   .container-right-top {
     font-size: var(--desktop-font-size);
   }
+}
+
+.project-title-small {
+  font-size: var(--title-font-size-small);
 }

@@ -17,10 +17,9 @@ function WorkContainer({ openModal, openMediaModal }) {
           description={project.description}
           fontFamily={project.fontFamily}
           fontSize={project.fontSize}
-          desktopFontSize={project.desktopFontSize}
           useVideo={project.useVideo}
           openModal={openModal}
-          openMediaModal={openMediaModal} // Pass down the function
+          openMediaModal={openMediaModal}
         />
       ))}
     </div>

@@ -101,8 +101,9 @@ const workContent = [
       '/images/firebase.png',
     ],
     description:
-      'Satanic Agenda is a calendar app with a robust “todo” system, featuring an “upcoming” and “graveyard” mechanic. There are “scrolls” for larger texts and even a “Satan button,” which can be used to call Satan so he can yell at you to...err...motivate you. The app also comes with Hell Weather, Hell News, Hell Sports, and Hell Stocks, so you can be up to date on what’s happening in Hell. Users can use for free and their session will be saved, but to save forever, they must make an account.',
+      'Satanic Agenda is a calendar app with a robust "todo" system, featuring an "upcoming" and "graveyard" mechanic. There are "scrolls" for larger texts and even a "Satan button," which can be used to call Satan so he can yell at you to...err...motivate you. The app also comes with Hell Weather, Hell News, Hell Sports, and Hell Stocks, so you can be up to date on what\'s happening in Hell. Users can use for free and their session will be saved, but to save forever, they must make an account.',
     fontFamily: 'Street Devil',
+    fontSize: 'small',
     useVideo: true,
   },
 
@@ -179,8 +180,9 @@ const workContent = [
       '/images/firebase.png',
     ],
     description:
-      'Have you ever settled down for some Sega Dreamcast when all of a sudden you are stricken with indecision as to which game you should play? Too many decisions! With Dreamcast Centrifuge, you can select your custom list of games and then RANDOMIZE! The app will make the tough decisions for you. Don’t feel like playing Sonic Adventure 2? No problem! Try some Sega Marine Fishing? What’s that? Don’t like fish? How about some Chu Chu Rocket. The world is yours.',
+      "Have you ever settled down for some Sega Dreamcast when all of a sudden you are stricken with indecision as to which game you should play? Too many decisions! With Dreamcast Centrifuge, you can select your custom list of games and then RANDOMIZE! The app will make the tough decisions for you. Don't feel like playing Sonic Adventure 2? No problem! Try some Sega Marine Fishing? What's that? Don't like fish? How about some Chu Chu Rocket. The world is yours.",
     fontFamily: 'Cyberpunk',
+    fontSize: 'small',
     useVideo: false,
   },
 ];

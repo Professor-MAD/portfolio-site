@@ -12,6 +12,7 @@ function WorkItem({
   icons,
   description,
   fontFamily,
+  fontSize,
   useVideo,
   openModal,
   openMediaModal,
@@ -53,7 +54,7 @@ function WorkItem({
 
       <div className="container-right">
         <div
-          className="project-title"
+          className={`project-title ${fontSize === 'small' ? 'project-title-small' : ''}`}
           style={{
             fontFamily: `var(--font-${fontFamily.toLowerCase().replace(/\s+/g, '')})`,
           }}

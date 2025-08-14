@@ -92,6 +92,23 @@ const workContent = [
   },
 
   {
+    title: 'Red Trail Wanderers',
+    logo: '/images/rtw-2.png',
+    screenshot: '/images/redtrail-screenshot.png',
+    github: 'https://github.com/Professor-MAD',
+    link: 'https://github.com/Professor-MAD',
+    icons: [
+      '/images/next.png',
+      '/images/prisma.png',
+      '/images/Postgresql_elephant.svg.png',
+    ],
+    description:
+      'Red Trail Wanderers is a comprehensive outdoor education and adventure website operated by the Onteora Alumni Association. It offers high adventure programs to Catskill Fire Towers, a 16-stop History Trail with educational content and patches, trail conservation projects on Long Island, camping at OSR Base Camp with access to 470 miles of Catskill trails, Eagle Scout project showcases, and free trail maps. The site serves as a hub for hiking, advancement, and conservation activities, connecting scouts and outdoor enthusiasts with nature experiences and community service opportunities.',
+    fontFamily: 'Bellfoods',
+    useVideo: false,
+  },
+
+  {
     title: 'Satanic Agenda',
     logo: '/images/satan-todo-favicon.png',
     screenshot: '/images/satan-vid.webm',

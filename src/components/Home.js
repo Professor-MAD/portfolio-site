@@ -1,14 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './Home.css';
 
 function Home() {
   const [isAvatarHovered, setIsAvatarHovered] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Trigger animations when component mounts
-    setIsVisible(true);
-  }, []);
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -35,7 +29,7 @@ function Home() {
   return (
     <div className="home-container">
       <div className="home-left">
-        <div className="Im">I'm</div>
+        <div className="Im">I&apos;m</div>
         <div className="name">MICHAEL DIOGUARDI</div>
         <div className="description">
           A coding jack with a focus on developing front-end designs that are

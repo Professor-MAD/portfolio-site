@@ -234,7 +234,7 @@
 
 @media (max-width: 768px) {
   .home-container {
-    min-height: 100vh;
+    min-height: auto; /* Change from 100vh to auto on mobile */
     padding: 1rem;
   }
 
@@ -276,6 +276,7 @@
 
 @media (max-width: 480px) {
   .home-container {
+    min-height: auto; /* Also apply to smaller screens */
     padding: 0.5rem;
   }
 

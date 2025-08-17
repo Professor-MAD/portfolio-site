@@ -32,9 +32,8 @@ function Home() {
         <div className="Im">I&apos;m</div>
         <div className="name">MICHAEL DIOGUARDI</div>
         <div className="description">
-          A coding jack with a focus on developing front-end designs that are
-          simple, memorable, and impactful. Crafting digital experiences that
-          leave lasting impressions.
+          A multi-disciplinary developer with a passion for creating beautiful
+          and functional digital experiences.
         </div>
         <button
           className="projects-button"

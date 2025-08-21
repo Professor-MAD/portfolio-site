@@ -13,7 +13,7 @@ const workContent = [
       'images/Postgresql_elephant.svg.png',
       '/images/railway.png',
       '/images/stripe.png',
-      '/images/firebase.png',
+      '/images/Amazon-S3-Logo.svg.png',
       '/images/resend.webp',
       '/images/twilio.svg',
       '/images/zendesk.png',
@@ -37,7 +37,7 @@ const workContent = [
       '/images/Typescript_logo_2020.svg.png',
       '/images/fast-api.png',
       'images/Postgresql_elephant.svg.png',
-      '/images/aws.png',
+      '/images/Amazon-S3-Logo.svg.png',
     ],
     description:
       "VIBE is a dynamic event platform designed to empower nightlife venues and event organizers. With a sleek, intuitive interface, VIBE makes it easy to create, manage, and promote events—from underground parties to world-class club nights. Users can explore trending events, discover top venues, and purchase tickets seamlessly. For businesses, VIBE offers robust tools for analytics, CRM, and custom branding. Whether you're hosting or attending, VIBE transforms the way people connect through nightlife and entertainment.",
@@ -115,43 +115,43 @@ const workContent = [
     fontSize: 'small',
   },
 
-  {
-    title: 'Satanic Agenda',
-    logo: '/images/satan-todo-favicon.png',
-    screenshot: '/images/satan-vid.webm',
-    github: 'https://github.com/Professor-MAD',
-    link: 'https://satanicagenda.com/',
-    icons: [
-      '/images/react.png',
-      '/images/css.png',
-      '/images/js.png',
-      '/images/firebase.png',
-    ],
-    description:
-      'Satanic Agenda is a calendar app with a robust "todo" system, featuring an "upcoming" and "graveyard" mechanic. There are "scrolls" for larger texts and even a "Satan button," which can be used to call Satan so he can yell at you to...err...motivate you. The app also comes with Hell Weather, Hell News, Hell Sports, and Hell Stocks, so you can be up to date on what\'s happening in Hell. Users can use for free and their session will be saved, but to save forever, they must make an account.',
-    fontFamily: 'Street Devil',
-    fontSize: 'small',
-    useVideo: true,
-  },
+  // {
+  //   title: 'Satanic Agenda',
+  //   logo: '/images/satan-todo-favicon.png',
+  //   screenshot: '/images/satan-vid.webm',
+  //   github: 'https://github.com/Professor-MAD',
+  //   link: 'https://satanicagenda.com/',
+  //   icons: [
+  //     '/images/react.png',
+  //     '/images/css.png',
+  //     '/images/js.png',
+  //     '/images/firebase.png',
+  //   ],
+  //   description:
+  //     'Satanic Agenda is a calendar app with a robust "todo" system, featuring an "upcoming" and "graveyard" mechanic. There are "scrolls" for larger texts and even a "Satan button," which can be used to call Satan so he can yell at you to...err...motivate you. The app also comes with Hell Weather, Hell News, Hell Sports, and Hell Stocks, so you can be up to date on what\'s happening in Hell. Users can use for free and their session will be saved, but to save forever, they must make an account.',
+  //   fontFamily: 'Street Devil',
+  //   fontSize: 'small',
+  //   useVideo: true,
+  // },
 
-  {
-    title: 'PROFESSOR MAD: COMIC BOOK STORE',
-    logo: '/images/favicon-professor-mad.png',
-    screenshot: '/images/mad-demo.webm',
-    github: 'https://github.com/Professor-MAD',
-    link: 'https://professormad.com/',
-    icons: [
-      '/images/html.png',
-      '/images/css.png',
-      '/images/js.png',
-      '/images/firebase.png',
-      '/images/stripe.png',
-    ],
-    description:
-      'Professormad.com is the homepage for the comedic adult-comic book “The Beautiful Shamaryayamayamays of Shnerfadalailisexinr.” The website comes with an e-commerce interface, browser game page, and the fastest-growing public fart-noise MP3 library—all user-generated. An artistic project of the infamous PROFESSOR MAD, the IP is accompanied by a video series and merch line. Buy your copy today and immediately regret your decision! Or maybe just stop by to play DINO NUKE COCKROACH.',
-    fontFamily: 'Yikes',
-    useVideo: true,
-  },
+  // {
+  //   title: 'PROFESSOR MAD: COMIC BOOK STORE',
+  //   logo: '/images/favicon-professor-mad.png',
+  //   screenshot: '/images/mad-demo.webm',
+  //   github: 'https://github.com/Professor-MAD',
+  //   link: 'https://professormad.com/',
+  //   icons: [
+  //     '/images/html.png',
+  //     '/images/css.png',
+  //     '/images/js.png',
+  //     '/images/firebase.png',
+  //     '/images/stripe.png',
+  //   ],
+  //   description:
+  //     'Professormad.com is the homepage for the comedic adult-comic book “The Beautiful Shamaryayamayamays of Shnerfadalailisexinr.” The website comes with an e-commerce interface, browser game page, and the fastest-growing public fart-noise MP3 library—all user-generated. An artistic project of the infamous PROFESSOR MAD, the IP is accompanied by a video series and merch line. Buy your copy today and immediately regret your decision! Or maybe just stop by to play DINO NUKE COCKROACH.',
+  //   fontFamily: 'Yikes',
+  //   useVideo: true,
+  // },
 
   // {
   //   title: "D-Comply: Compliance Training Dashboard",
@@ -194,24 +194,24 @@ const workContent = [
     useVideo: false,
   },
 
-  {
-    title: 'DREAMCAST CENTRIFUGE: RANDOMIZER',
-    logo: '/images/dreamcast-centrifuge.png',
-    screenshot: '/images/dreamcast-shot.png',
-    github: 'https://github.com/Professor-MAD',
-    link: 'https://dreamcastcentrifuge.web.app/',
-    icons: [
-      '/images/html.png',
-      '/images/css.png',
-      '/images/js.png',
-      '/images/firebase.png',
-    ],
-    description:
-      "Have you ever settled down for some Sega Dreamcast when all of a sudden you are stricken with indecision as to which game you should play? Too many decisions! With Dreamcast Centrifuge, you can select your custom list of games and then RANDOMIZE! The app will make the tough decisions for you. Don't feel like playing Sonic Adventure 2? No problem! Try some Sega Marine Fishing? What's that? Don't like fish? How about some Chu Chu Rocket. The world is yours.",
-    fontFamily: 'Cyberpunk',
-    fontSize: 'small',
-    useVideo: false,
-  },
+  // {
+  //   title: 'DREAMCAST CENTRIFUGE: RANDOMIZER',
+  //   logo: '/images/dreamcast-centrifuge.png',
+  //   screenshot: '/images/dreamcast-shot.png',
+  //   github: 'https://github.com/Professor-MAD',
+  //   link: 'https://dreamcastcentrifuge.web.app/',
+  //   icons: [
+  //     '/images/html.png',
+  //     '/images/css.png',
+  //     '/images/js.png',
+  //     '/images/firebase.png',
+  //   ],
+  //   description:
+  //     "Have you ever settled down for some Sega Dreamcast when all of a sudden you are stricken with indecision as to which game you should play? Too many decisions! With Dreamcast Centrifuge, you can select your custom list of games and then RANDOMIZE! The app will make the tough decisions for you. Don't feel like playing Sonic Adventure 2? No problem! Try some Sega Marine Fishing? What's that? Don't like fish? How about some Chu Chu Rocket. The world is yours.",
+  //   fontFamily: 'Cyberpunk',
+  //   fontSize: 'small',
+  //   useVideo: false,
+  // },
 ];
 
 export default workContent;

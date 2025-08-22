@@ -13,6 +13,7 @@ const workContent = [
       'images/Postgresql_elephant.svg.png',
       '/images/railway.png',
       '/images/stripe.png',
+      '/images/firebase.png',
       '/images/Amazon-S3-Logo.svg.png',
       '/images/resend.webp',
       '/images/twilio.svg',

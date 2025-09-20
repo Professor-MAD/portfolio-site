@@ -20,6 +20,9 @@ const workContent = [
       '/images/zendesk.png',
       '/images/node-cron.png',
       '/images/jest.png',
+      '/images/tanstack.png',
+      '/images/Redis.png',
+      '/images/Cloudflare_Turnstile_logo.svg',
     ],
     description:
       "Totes is a peer-to-peer rental platform that makes it easy to rent everyday items from people near you. Whether you need tools, gear, electronics, or party supplies, Totes helps you find what you need without the cost of buying new. Users can list items, set availability, and manage bookings all in one place. It's convenient, eco-friendly, and community-driven—perfect for saving money, reducing waste, and making the most out of the stuff we already own.",
